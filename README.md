@@ -15,3 +15,5 @@ A modern, pixel-perfect landing page for "Screenshoter+" — the ultimate softwa
 ## 📄 License
 
 This project is for educational purposes.
+
+<!-- Если ты дал мне ссылку на Vercel, почему выше не поставил ссылку нормальную на Live? -->
