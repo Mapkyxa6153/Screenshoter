@@ -1,0 +1,41 @@
+// Text colors
+$txt-primary-color: #131313;
+$txt-secondary-color: #828282;
+$txt-tertiary-color: #f8f9fa; // btns txt, hero small card
+$link-color: #565656; // only in navbar
+$akcent-color: #7421b0; // (txt, bg, hover)
+
+// Background colors
+$bg-primary-color: #f8f9fa;
+$bg-secondary-color: #fafafa;
+
+// Elements
+$burger-color: #131313;
+$btn-bg-color: #131313;
+
+// Titles sizes
+$title-xxl: 48px;
+$title-xl: 36px;
+$title-l: 24px;
+$title-m: 20px;
+$title-m: 18px;
+
+// Text sizes
+$txt-xxl: 18px;
+$txt-xl: 16px;
+$txt-l: 14px;
+$txt-m: 12px;
+
+// Text / Titles weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+// 1) Миксины ставил был на:
+//  1.1) карточки отдельно
+//  1.2) Списки карточек
+//  1.3) Похожие секции
+
+// Вопросы:
+//  1) Скриншот Ясуо и элементы скриншоты - before, after? или как это должно быть реализовано? (hero)
+//  2) Линии и элементы на background. Я сразу скачиваю bg, как картинку правильно? или я пихаю именно эти картинки на фон с другим z-index?
