@@ -1,7 +1,7 @@
 // Text colors
 $txt-primary-color: #131313;
 $txt-secondary-color: #828282;
-$txt-tertiary-color: #f8f9fa; // btns txt, hero small card
+$txt-tertiary-color: #f8f9fa; // btns txt, hero small card - а тебе нужен именно третий цвет? может если это, например, для фона кнопок или чего-то еще, то стоит назвать его более конкретно
 $link-color: #565656; // only in navbar
 $akcent-color: #7421b0; // (txt, bg, hover)
 
@@ -27,7 +27,7 @@ $txt-l: 14px;
 $txt-m: 12px;
 
 // Text / Titles weights
-$fw-regular: 400;
+$fw-regular: 400; // ты быстро забудешь что это значит fw
 $fw-medium: 500;
 $fw-bold: 700;
 
@@ -36,6 +36,29 @@ $fw-bold: 700;
 //  1.2) Списки карточек
 //  1.3) Похожие секции
 
+// пища для размышления: font, flex center, hover only desktop, glass effect, shadows, violet gradient, border и radius
+
 // Вопросы:
-//  1) Скриншот Ясуо и элементы скриншоты - before, after? или как это должно быть реализовано? (hero)
-//  2) Линии и элементы на background. Я сразу скачиваю bg, как картинку правильно? или я пихаю именно эти картинки на фон с другим z-index?
+//  1) Скриншот Ясуо и элементы скриншоты - before, after? или как это должно быть реализовано? (hero) +
+//  2) Линии и элементы на background. Я сразу скачиваю bg, как картинку правильно? или я пихаю именно эти картинки на фон с другим z-index? +
+
+
+
+// немного не хватает шрифтовых переменных font family
+
+// не забывай что шрифты ты можешь задавать подобным синтаксисом - font: [style] [variant] [weight] [stretch] size[/line-height] family;
+// пример: font: 600 16px/1.4 "Roboto", sans-serif; или font: italic 400 14px/20px Arial, sans-serif;
+
+// akcent пишется не с буквой "k", а с буквой "c" - accent
+
+// те же волны-линии или размытые фигуры тебе ничто не мешает поместить как svg в псевдоэлементы и позиционировать их как нужно (линии я бы в дальнейшем анимировал чтобы переливались цвета)
+
+// Titles sizes - дважды указан title-m - 20px и 18px. Нужно переименовать один из них в title-s для 18px
+
+// не хватает line-height переменных для текстов и заголовков
+
+// как правило делается: $color-hover, $color-active, $color-disabled, $color-border - проверь по макету что надо в твоей верстке
+
+// нет переменных радиусов и теней
+
+// еще стоит подумать над добавлением переменных spacing (отступов) для отступов между блоками и внутри блоков (padding, margin)
