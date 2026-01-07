@@ -1,0 +1,46 @@
+@use "./variables" as vars;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin active-box-shadow {
+  box-shadow: 0 26px 48px -23px vars.$accent-color;
+}
+
+@mixin basic-box-shadow {
+  box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
+}
+
+// universal mixin for hover for mouse/keyboard devices (no touch screens)
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Approximate css for glass effect card
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  blur: 50%;
+}
+
+// vertical gradient for hero
+@mixin violet-vertical-gradient {
+  background: vars.$accent-color;
+  background: linear-gradient(180deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
+}
+
+// horizontal gradient for btn
+@mixin violet-horizontal-gradient {
+  background: vars.$accent-color;
+  background: linear-gradient(90deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
+}
