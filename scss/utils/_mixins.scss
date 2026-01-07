@@ -23,7 +23,7 @@
   }
 }
 
-// Approximate css for glass effect card
+// Approximate styles for glass effect
 @mixin glass-effect {
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(12px);
@@ -33,13 +33,13 @@
   blur: 50%;
 }
 
-// vertical gradient for hero
+// vertical gradient (squircle)
 @mixin violet-vertical-gradient {
   background: vars.$accent-color;
   background: linear-gradient(180deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
 }
 
-// horizontal gradient for btn
+// horizontal gradient for btns
 @mixin violet-horizontal-gradient {
   background: vars.$accent-color;
   background: linear-gradient(90deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
