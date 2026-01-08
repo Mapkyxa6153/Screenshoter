@@ -308,4 +308,22 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+@media (max-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding: 0 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
