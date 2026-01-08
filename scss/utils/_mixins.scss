@@ -6,12 +6,14 @@
   align-content: center;
 }
 
-@mixin hover-box-shadow {
-  box-shadow: 0 26px 48px -23px vars.$accent-color;
-}
-
-@mixin basic-box-shadow {
+// Basic box shadow for elemets with hover for mouse/keyboard devices only (no touch screens)
+@mixin box-shadow-with-hover {
   box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 26px 48px -23px vars.$accent-color;
+    }
+  }
 }
 
 // universal mixin for hover for mouse/keyboard devices (no touch screens)
@@ -33,14 +35,7 @@
   blur: 50%;
 }
 
-// vertical gradient (squircle)
-@mixin violet-vertical-gradient {
-  background: vars.$accent-color;
-  background: linear-gradient(180deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
-}
-
-// horizontal gradient for btns
-@mixin violet-horizontal-gradient {
-  background: vars.$accent-color;
-  background: linear-gradient(90deg, rgba(116, 33, 176, 1) 0%, rgba(208, 142, 255, 1) 100%);
+// Universal mixin for linear gradient for elements, direction will depend on deg used in mixin
+@mixin violet-gradient($direction: 180deg) {
+  background: linear-gradient($direction, vars.$accent-color, vars.$end-color);
 }
