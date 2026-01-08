@@ -6,7 +6,7 @@
   align-content: center;
 }
 
-@mixin active-box-shadow {
+@mixin hover-box-shadow {
   box-shadow: 0 26px 48px -23px vars.$accent-color;
 }
 
