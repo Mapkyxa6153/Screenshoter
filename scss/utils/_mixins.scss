@@ -3,7 +3,12 @@
 @mixin flex-center {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 // Basic box shadow for elemets with hover for mouse/keyboard devices only (no touch screens)

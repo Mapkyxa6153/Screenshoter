@@ -1,0 +1,31 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.header {
+  &__wrapper {
+    @include mixin.flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+  }
+}
+
+.navbar {
+  @include mixin.flex-row;
+  gap: 60px;
+  align-items: center;
+  &__list {
+    list-style: none;
+    @include mixin.flex-row;
+    gap: 60px;
+  }
+  &__item {
+    text-decoration: none;
+    color: vars.$link-color;
+  }
+}
+
+.lang-link {
+  border: none;
+  background-color: transparent;
+}
