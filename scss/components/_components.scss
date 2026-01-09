@@ -1,5 +1,26 @@
 @use "../utils/mixins" as mixin;
+@use "../utils/variables" as vars;
 
 .container {
   @include mixin.container;
+}
+
+.logo {
+  width: clamp(141px, 15vw, 250px); // Max-width 250px, min-width 250px, 15vw between max and min
+}
+
+.burger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+  &:active {
+    transform: scale(0.9) translateY(3px);
+  }
+}
+
+@media (max-width: vars.$breakpoint-xl) {
+  .burger {
+    display: flex;
+  }
 }

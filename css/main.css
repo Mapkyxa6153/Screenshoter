@@ -322,7 +322,7 @@ template {
 }
 @media (max-width: 991px) {
   .container {
-    max-width: 960px;
+    max-width: 900px;
   }
 }
 @media (max-width: 575px) {
@@ -332,6 +332,25 @@ template {
   }
 }
 
+.logo {
+  width: clamp(141px, 15vw, 250px);
+}
+
+.burger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.burger:active {
+  transform: scale(0.9) translateY(3px);
+}
+
+@media (max-width: 991px) {
+  .burger {
+    display: flex;
+  }
+}
 .header__wrapper {
   display: flex;
   flex-direction: row;
@@ -340,7 +359,7 @@ template {
   padding-top: 50px;
 }
 
-.navbar {
+.navbar__menu {
   display: flex;
   flex-direction: row;
   gap: 60px;
@@ -360,4 +379,10 @@ template {
 .lang-link {
   border: none;
   background-color: transparent;
+}
+
+@media (max-width: 991px) {
+  .navbar__menu {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

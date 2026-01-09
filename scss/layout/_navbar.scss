@@ -11,9 +11,11 @@
 }
 
 .navbar {
-  @include mixin.flex-row;
-  gap: 60px;
-  align-items: center;
+  &__menu {
+    @include mixin.flex-row;
+    gap: 60px;
+    align-items: center;
+  }
   &__list {
     list-style: none;
     @include mixin.flex-row;
@@ -28,4 +30,12 @@
 .lang-link {
   border: none;
   background-color: transparent;
+}
+
+@media (max-width: vars.$breakpoint-xl) {
+  .navbar {
+    &__menu {
+      display: none;
+    }
+  }
 }
