@@ -12,6 +12,8 @@
 .burger {
   display: none;
   background-color: transparent;
+  position: relative;
+  z-index: 1001;
   border: none;
   transition: transform 0.3s ease;
   &:active {

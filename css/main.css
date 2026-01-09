@@ -339,6 +339,8 @@ template {
 .burger {
   display: none;
   background-color: transparent;
+  position: relative;
+  z-index: 1001;
   border: none;
   transition: transform 0.3s ease;
 }
@@ -350,6 +352,17 @@ template {
   .burger {
     display: flex;
   }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+.header--hidden {
+  transform: translateY(-100%);
 }
 .header__wrapper {
   display: flex;
@@ -383,6 +396,27 @@ template {
 
 @media (max-width: 991px) {
   .navbar__menu {
-    display: none;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 100px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
   }
+  .navbar__menu--active {
+    right: 0;
+    visibility: visible;
+  }
+  .navbar__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

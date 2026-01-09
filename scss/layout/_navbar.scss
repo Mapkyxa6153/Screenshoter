@@ -2,6 +2,15 @@
 @use "../utils/mixins" as mixin;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  &--hidden {
+    transform: translateY(-100%);
+  }
   &__wrapper {
     @include mixin.flex-row;
     justify-content: space-between;
@@ -35,7 +44,24 @@
 @media (max-width: vars.$breakpoint-xl) {
   .navbar {
     &__menu {
-      display: none;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff; // Поставить другой цвет!!! 💡
+      padding: 100px 20px;
+      transition: right 0.3s ease;
+      z-index: 999;
+      &--active {
+        right: 0;
+        visibility: visible;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
