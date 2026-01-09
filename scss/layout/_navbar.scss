@@ -39,14 +39,16 @@
 .lang-link {
   border: none;
   background-color: transparent;
+  color: vars.$link-color;
 }
 
 @media (max-width: vars.$breakpoint-xl) {
   .navbar {
     &__menu {
+      @include mixin.flex-column;
       position: fixed;
       visibility: hidden;
-      top: 0;
+      top: -50px;
       right: -100%;
       width: 100%;
       height: 100vh;

@@ -11,6 +11,11 @@
   flex-direction: row;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 // Basic box shadow for elemets with hover for mouse/keyboard devices only (no touch screens)
 @mixin box-shadow-with-hover {
   box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
@@ -47,7 +52,6 @@
 
 // Main container (approximate sizes)
 @mixin container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
@@ -56,7 +60,6 @@
     max-width: 900px;
   }
   @media (max-width: 575px) {
-    max-width: 100%;
     padding: 0 40px;
   }
 }
