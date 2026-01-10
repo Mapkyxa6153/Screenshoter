@@ -52,7 +52,7 @@
 
 // Main container (approximate sizes)
 @mixin container {
-  max-width: 1200px; // оно не 1200px на desktop! и не 1300 с паддингом тоже 🛑
+  max-width: 1460px;
   margin: 0 auto;
   padding: 0 50px;
 
