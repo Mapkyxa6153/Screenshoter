@@ -1,0 +1,70 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  &--hidden {
+    transform: translateY(-100%);
+  }
+  &__wrapper {
+    @include mixin.flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+  }
+}
+
+.navbar {
+  &__menu {
+    @include mixin.flex-row;
+    gap: 60px;
+    align-items: center;
+  }
+  &__list {
+    list-style: none;
+    @include mixin.flex-row;
+    gap: 60px;
+  }
+  &__item {
+    text-decoration: none;
+    color: vars.$link-color;
+    line-height: vars.$line-height-150;
+  }
+}
+
+.lang-link {
+  border: none;
+  background-color: transparent;
+  color: vars.$link-color;
+}
+
+@media (max-width: vars.$breakpoint-xl) {
+  .navbar {
+    &__menu {
+      @include mixin.flex-column;
+      position: fixed;
+      visibility: hidden;
+      top: -50px;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff; // Поставить другой цвет!!! 💡
+      padding: 100px 20px;
+      transition: right 0.3s ease;
+      z-index: 999;
+      &--active {
+        right: 0;
+        visibility: visible;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

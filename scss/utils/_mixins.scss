@@ -3,7 +3,17 @@
 @mixin flex-center {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 // Basic box shadow for elemets with hover for mouse/keyboard devices only (no touch screens)
@@ -42,16 +52,14 @@
 
 // Main container (approximate sizes)
 @mixin container {
-  width: 100%;
-  max-width: 1200px;
+  max-width: 1460px;
   margin: 0 auto;
   padding: 0 50px;
 
   @media (max-width: 991px) {
-    max-width: 960px;
+    max-width: 900px;
   }
   @media (max-width: 575px) {
-    max-width: 100%;
     padding: 0 40px;
   }
 }

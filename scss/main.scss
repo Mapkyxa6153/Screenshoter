@@ -1,4 +1,7 @@
 @use "base/normalize.scss";
+@use "base/fonts";
 @use "./utils/variables";
-@use "./utils/mixins" as mixin;
+@use "./utils/mixins";
 @use "./components/components";
+@use "./layout/navbar";
+@use "./base/globals";
