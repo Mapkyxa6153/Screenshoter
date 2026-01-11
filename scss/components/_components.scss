@@ -20,6 +20,20 @@
   }
 }
 
+// Mainly btns in project are black, that's why general style for btn with black bgc
+.btn {
+  text-decoration: none;
+  padding: 23px 41px;
+  color: vars.$txt-tertiary-color;
+  background-color: vars.$element-black-color;
+  border-radius: vars.$br-radius-s;
+  transition: transform 0.3s ease;
+}
+
+.btn-violet {
+  @include mixin.violet-gradient(90deg);
+}
+
 @media (max-width: vars.$breakpoint-xl) {
   .burger {
     display: flex;
