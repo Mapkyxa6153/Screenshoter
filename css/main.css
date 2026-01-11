@@ -316,25 +316,34 @@ template {
 
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Regular.woff2");
+  src: url("/assets/fonts/rubik/Rubik-Regular.woff2") format "woff2";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Medium.woff2");
+  src: url("/assets/fonts/rubik/Rubik-Medium.woff2") format "woff2";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Bold.woff2");
+  src: url("/assets/fonts/rubik/Rubik-Bold.woff2") format "woff2";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .container {
   max-width: 1460px;
   margin: 0 auto;
@@ -352,7 +361,7 @@ template {
 }
 
 .logo {
-  width: clamp(141px, 15vw, 250px);
+  width: clamp(141px, 23vw, 250px);
 }
 
 .burger {
@@ -501,12 +510,4 @@ template {
     align-items: center;
     padding: 0;
   }
-}
-body {
-  font-family: "Rubik", sans-serif;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

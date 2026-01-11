@@ -48,7 +48,7 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScrollY;
 });
 
-document.addEventListener("click", (e) => { // закрытие на клик мимо 🛑
+document.addEventListener("click", (e) => {
   if (!menu.classList.contains("navbar__menu--active")) return;
 
   const clickedInsideMenu = menu.contains(e.target);
@@ -59,7 +59,7 @@ document.addEventListener("click", (e) => { // закрытие на клик м
   }
 });
 
-document.addEventListener("keydown", (e) => { // закрытие на Esc 🛑
+document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
   if (menu.classList.contains("navbar__menu--active")) toggleMenu();
 });

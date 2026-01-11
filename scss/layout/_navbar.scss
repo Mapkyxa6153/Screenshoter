@@ -74,7 +74,10 @@
     content: "";
     position: absolute;
     right: -10px;
-    top: 8px; // почему бы не сделать что-то вроде - top: 50%; и transform: translateY(-50%) rotate(45deg); 🛑
+    top: 8px;
+    // почему бы не сделать что-то вроде - top: 50%; и transform: translateY(-50%) rotate(45deg); 🛑
+    // Потому что при top: 50%; и transform: translateY(-50%) rotate (45deg); стрелка позиционируется ниже, чем на макете и чем мне хочется🟢
+
     width: 8px;
     height: 8px;
     border-right: 2px solid currentColor;
