@@ -47,3 +47,19 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = currentScrollY;
 });
+
+document.addEventListener("click", (e) => { // закрытие на клик мимо 🛑
+  if (!menu.classList.contains("navbar__menu--active")) return;
+
+  const clickedInsideMenu = menu.contains(e.target);
+  const clickedBurger = burger.contains(e.target);
+
+  if (!clickedInsideMenu && !clickedBurger) {
+    toggleMenu();
+  }
+});
+
+document.addEventListener("keydown", (e) => { // закрытие на Esc 🛑
+  if (e.key !== "Escape") return;
+  if (menu.classList.contains("navbar__menu--active")) toggleMenu();
+});
