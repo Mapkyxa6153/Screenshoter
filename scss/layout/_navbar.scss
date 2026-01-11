@@ -74,7 +74,7 @@
     content: "";
     position: absolute;
     right: -10px;
-    top: 8px;
+    top: 8px; // почему бы не сделать что-то вроде - top: 50%; и transform: translateY(-50%) rotate(45deg); 🛑
     width: 8px;
     height: 8px;
     border-right: 2px solid currentColor;
