@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Screenshoter+</title>
-    <meta
-      name="description"
-      content="Сохраняй лучшие игровые моменты в один клик! Максимальное качество, никаких лагов и быстрая отправка друзьям. Твой идеальный софт для скриншотов здесь."
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header__wrapper">
-        <a href="/"><img class="logo" src="/assets/icons/logo.svg" alt="Logo of brand leads to the home page" /></a>
-        <nav class="navbar">
-          <div class="navbar__menu">
-            <ul class="navbar__list">
-              <li class=""><a href="#" class="navbar__item">Функции</a></li>
-              <li class=""><a href="#" class="navbar__item">Преимущества</a></li>
-              <li class=""><a href="#" class="navbar__item">Как использовать</a></li>
-              <li class=""><a href="#" class="navbar__item">Частые вопросы</a></li>
-            </ul>
-            <div class="lang-dropdown">
-              <button class="lang-link">RU</button>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screenshoter+</title>
+  <meta name="description"
+    content="Сохраняй лучшие игровые моменты в один клик! Максимальное качество, никаких лагов и быстрая отправка друзьям. Твой идеальный софт для скриншотов здесь." />
+  <link rel="stylesheet" href="css/main.css" /> <!-- относительный путь 🛑 -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__wrapper">
+      <a href="/"><img class="logo" src="/assets/icons/logo.svg" alt="Logo of brand leads to the home page" /></a>
+      <!-- либо название, либо На главную 🛑  -->
+      <nav class="navbar">
+        <div class="navbar__menu">
+          <ul class="navbar__list">
+            <li class=""><a href="#" class="navbar__item">Функции</a></li> <!-- зачем пустой класс у li? 🛑 -->
+            <li class=""><a href="#" class="navbar__item">Преимущества</a></li>
+            <li class=""><a href="#" class="navbar__item">Как использовать</a></li>
+            <li class=""><a href="#" class="navbar__item">Частые вопросы</a></li>
+          </ul>
+          <div class="lang-dropdown">
+            <button class="lang-link">RU</button>
           </div>
-          <button class="burger" type="button" aria-label="Opens mobile menu">
-            <img src="/assets/icons/burger.svg" alt="" class="burger__icon" />
-          </button>
-        </nav>
-      </div>
-    </header>
-    <script src="/js/main.js"></script>
-  </body>
+        </div>
+        <button class="burger" type="button" aria-label="Opens mobile menu">
+          <img src="/assets/icons/burger.svg" alt="" class="burger__icon" />
+        </button>
+      </nav>
+    </div>
+  </header>
+  <script src="/js/main.js"></script> <!-- абсолютный путь 🛑 -->
+</body>
+
 </html>
