@@ -6,9 +6,8 @@
 }
 
 .logo {
-  width: clamp(141px, 15vw, 250px); // Max-width 250px, min-width 250px, 15vw between max and min
+  width: clamp(141px, 23vw, 250px); // Max-width 250px, min-width 250px, 15vw between max and min
 }
-
 .burger {
   display: none;
   background-color: transparent;

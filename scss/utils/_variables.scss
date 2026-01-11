@@ -48,13 +48,7 @@ $br-radius-m: 10px; // regular cards
 $br-radius-s: 5px; // btns
 
 // Approximate breakpoints
+$breakpoint-xxl: 1150px;
 $breakpoint-xl: 991px;
 $breakpoint-l: 575px;
 $breakpoint-m: 400px;
-
-// не забывай что шрифты ты можешь задавать подобным синтаксисом - font: [style] [variant] [weight] [stretch] size[/line-height] family;
-// пример: font: 600 16px/1.4 "Roboto", sans-serif; или font: italic 400 14px/20px Arial, sans-serif;
-
-// те же волны-линии или размытые фигуры тебе ничто не мешает поместить как svg в псевдоэлементы и позиционировать их как нужно (линии я бы в дальнейшем анимировал чтобы переливались цвета) ⏳ Понимаю логику, но надо еще осмыслить, переварить
-
-// как правило делается: $color-hover, $color-active, $color-disabled, $color-border - проверь по макету что надо в твоей верстке ⏳
