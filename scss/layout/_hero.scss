@@ -4,20 +4,64 @@
 .hero {
   padding-top: 200px;
   &__wrapper {
+    @include mixin.flex-row;
+    justify-content: space-between;
+  }
+  &__content {
     @include mixin.flex-column;
+    flex-direction: 0 1 50%;
     align-items: flex-start;
+    max-width: 525px;
+
+    &-title {
+      color: vars.$txt-primary-color;
+      font-size: vars.$title-xxl;
+    }
+    &-txt {
+      @include mixin.grey-section-txt;
+      line-height: vars.$line-height-200;
+    }
   }
-  &__title {
-    color: vars.$txt-primary-color;
-    font-size: vars.$title-xxl;
-  }
-  &__txt {
-    @include mixin.grey-section-txt;
-    line-height: vars.$line-height-200;
+  &__media {
+    flex: 0 1 50%;
+
+    &-composition {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+    }
+    &-gradient {
+      position: absolute;
+      top: -88px;
+      left: 35%;
+      width: 800px;
+      height: 740px;
+      border-radius: vars.$br-radius-xl;
+      @include mixin.violet-gradient(180deg);
+      z-index: 1;
+    }
+    &-img {
+      position: absolute;
+      left: 50px;
+      z-index: 2;
+    }
+    &-card {
+      position: absolute;
+      @include mixin.flex-center;
+      padding: 28px 50px;
+      top: 450px;
+      left: 430px;
+      max-width: 282px;
+      min-width: 180px;
+      border-radius: vars.$br-radius-m;
+      @include mixin.glass-effect;
+      color: vars.$txt-tertiary-color;
+      z-index: 3;
+    }
   }
 }
 
-// Не уверен насчёт такого подхода к highlith, но пока что рабочий вариант, которым и повертеть можно. UPD - с нынешней реализацией точно нет!
+// Не уверен насчёт такого подхода к highlight, но пока что рабочий вариант, которым и повертеть можно. UPD - с нынешней реализацией точно нет!
 
 .highlight {
   background-color: vars.$accent-color-transparent;

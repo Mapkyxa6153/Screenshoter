@@ -32,6 +32,12 @@
 
 .btn-violet {
   @include mixin.violet-gradient(90deg);
+  transition: backrdoung 0.3s ease;
+
+  // HOVER доработаю, пока есть нюансы
+  @include mixin.hover {
+    background: vars.$accent-color;
+  }
 }
 
 @media (max-width: vars.$breakpoint-xl) {

@@ -54,7 +54,7 @@
 
 // Universal mixin for linear gradient for elements, direction will depend on deg used in mixin
 @mixin violet-gradient($direction: 180deg) {
-  background: linear-gradient($direction, vars.$accent-color, vars.$end-color);
+  background-image: linear-gradient($direction, vars.$accent-color, vars.$end-color);
 }
 
 // Main container (approximate sizes)
