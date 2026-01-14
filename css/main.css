@@ -361,7 +361,33 @@ body {
 }
 
 .logo {
-  width: clamp(141px, 23vw, 250px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "icon title" "icon subtitle";
+  text-decoration: none;
+  -moz-column-gap: 10px;
+  column-gap: 7px;
+}
+.logo__icon {
+  width: 40px;
+  height: 40px;
+  grid-area: icon;
+  align-self: center;
+}
+.logo__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #7421b0;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  grid-area: title;
+}
+.logo__subtitle {
+  font-size: 9px;
+  font-weight: 400;
+  color: #828282;
+  grid-area: subtitle;
 }
 
 .burger {

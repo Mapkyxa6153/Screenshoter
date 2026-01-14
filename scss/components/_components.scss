@@ -5,8 +5,43 @@
   @include mixin.container;
 }
 
+// .logo {
+//   width: clamp(141px, 23vw, 250px); // Max-width 250px, min-width 250px, 15vw between max and min
+// }
+
 .logo {
-  width: clamp(141px, 23vw, 250px); // Max-width 250px, min-width 250px, 15vw between max and min
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "icon title"
+    "icon subtitle";
+  text-decoration: none;
+  -moz-column-gap: 10px;
+  column-gap: 7px;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    grid-area: icon;
+    align-self: center;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: vars.$font-weight-medium;
+    color: vars.$accent-color;
+    font-size: vars.$title-l;
+    letter-spacing: 1.5px;
+    grid-area: title;
+  }
+
+  &__subtitle {
+    font-size: 9px;
+    font-weight: 400;
+    color: vars.$txt-secondary-color;
+    grid-area: subtitle;
+  }
 }
 .burger {
   display: none;
