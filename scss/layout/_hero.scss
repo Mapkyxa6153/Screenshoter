@@ -9,17 +9,19 @@
   }
   &__content {
     @include mixin.flex-column;
-    flex-direction: 0 1 50%;
     align-items: flex-start;
     max-width: 525px;
+    margin-right: auto;
 
     &-title {
       color: vars.$txt-primary-color;
       font-size: vars.$title-xxl;
+      margin: 0;
     }
     &-txt {
       @include mixin.grey-section-txt;
       line-height: vars.$line-height-200;
+      margin: 40px 0px 80px 0;
     }
   }
   &__media {
@@ -68,7 +70,8 @@
   color: vars.$accent-color;
   border: 2px solid vars.$accent-color;
   position: relative;
-  display: inline;
+  display: inline-block;
+  white-space: nowrap;
   padding: 5px;
 }
 
