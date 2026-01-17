@@ -337,6 +337,7 @@ template {
 }
 body {
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 .no-scroll {
@@ -387,27 +388,18 @@ body {
 
 .btn-violet {
   background-image: linear-gradient(90deg, #7421b0, #d08eff);
-  transition: backrdoung 0.3s ease;
+  transition: 0.5s;
   position: relative;
   overflow: hidden;
 }
-.btn-violet::after {
-  content: "";
-  position: absolute;
-  background-image: linear-gradient(180deg, #7421b0, #d08eff);
-  border-radius: 5px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  opacity: 0.5;
-  transition: left 0.5s ease;
-}
 @media (hover: hover) {
-  .btn-violet:hover::after {
-    left: 0%;
+  .btn-violet:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(116, 33, 176, 0.4), 0 15px 40px rgba(116, 33, 176, 0.2);
   }
+}
+.btn-violet:active {
+  transform: scale(0.9);
 }
 
 @media (max-width: 991px) {
@@ -546,6 +538,7 @@ body {
   }
 }
 .hero {
+  position: relative;
   padding-top: 200px;
 }
 .hero__wrapper {
@@ -571,6 +564,9 @@ body {
   font-weight: 400;
   line-height: 200%;
   margin: 40px 0px 80px 0;
+}
+.hero__element-ring {
+  filter: blur(10px);
 }
 .hero__media {
   flex: 0 1 50%;
@@ -645,16 +641,4 @@ body {
   bottom: -5px;
   left: -5px;
   box-shadow: 105px 0 0 #7421b0, 205px 0 0 #7421b0;
-}
-
-COMPONENTS .btn {
-  text-decoration: none;
-  padding: 23px 41px;
-  color: #f8f9fa;
-  background-color: #131313;
-  border-radius: 5px;
-}
-
-.btn-violet {
-  background-image: linear-gradient(90deg, #7421b0, #d08eff);
 }/*# sourceMappingURL=main.css.map */

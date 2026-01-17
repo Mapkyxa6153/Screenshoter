@@ -2,6 +2,7 @@
 @use "../utils/mixins" as mixin;
 
 .hero {
+  position: relative;
   padding-top: 200px;
   &__wrapper {
     @include mixin.flex-row;
@@ -23,6 +24,10 @@
       line-height: vars.$line-height-200;
       margin: 40px 0px 80px 0;
     }
+  }
+  &__element-ring {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
   }
   &__media {
     flex: 0 1 50%;
@@ -63,8 +68,6 @@
   }
 }
 
-// Не уверен насчёт такого подхода к highlight, но пока что рабочий вариант, которым и повертеть можно. UPD - с нынешней реализацией точно нет!
-
 .highlight {
   background-color: vars.$accent-color-transparent;
   color: vars.$accent-color;
@@ -87,28 +90,15 @@
 .highlight::before {
   top: -5px;
   left: -5px;
-  box-shadow: 105px 0 0 vars.$accent-color, 205px 0 0 vars.$accent-color;
+  box-shadow:
+    105px 0 0 vars.$accent-color,
+    205px 0 0 vars.$accent-color;
 }
 
 .highlight::after {
   bottom: -5px;
   left: -5px;
-  box-shadow: 105px 0 0 vars.$accent-color, 205px 0 0 vars.$accent-color;
-}
-
-COMPONENTS
-
-
-
-// Mainly btns in project are black, that's why general style for btn with black bgc
-.btn {
-  text-decoration: none;
-  padding: 23px 41px;
-  color: vars.$txt-tertiary-color;
-  background-color: vars.$element-black-color;
-  border-radius: vars.$br-radius-s;
-}
-
-.btn-violet {
-  @include mixin.violet-gradient(90deg);
+  box-shadow:
+    105px 0 0 vars.$accent-color,
+    205px 0 0 vars.$accent-color;
 }

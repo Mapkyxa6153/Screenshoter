@@ -32,27 +32,16 @@
 
 .btn-violet {
   @include mixin.violet-gradient(90deg);
-  transition: backrdoung 0.3s ease;
+  transition: 0.5s;
   position: relative;
   overflow: hidden;
-  &::after {
-    content: "";
-    position: absolute;
-    @include mixin.violet-gradient(180deg);
-    // background-color: vars.$accent-color;
-    border-radius: vars.$br-radius-s;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    opacity: 0.5;
-    transition: left 0.5s ease;
-  }
+
   @include mixin.hover {
-    &::after {
-      left: 0%;
-    }
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(vars.$accent-color, 0.4), 0 15px 40px rgba(vars.$accent-color, 0.2);
+  }
+  &:active {
+    transform: scale(0.9);
   }
 }
 
