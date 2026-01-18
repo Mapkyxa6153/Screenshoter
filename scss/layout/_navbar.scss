@@ -36,7 +36,9 @@
     position: relative;
     color: vars.$link-color;
     line-height: vars.$line-height-150;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
     &::after {
       position: absolute;
       bottom: -5px;
@@ -65,7 +67,9 @@
   background-color: transparent;
   color: vars.$link-color;
   position: relative;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
   cursor: pointer;
   @include mixin.hover {
     color: vars.$accent-color;
@@ -75,9 +79,6 @@
     position: absolute;
     right: -10px;
     top: 8px;
-    // почему бы не сделать что-то вроде - top: 50%; и transform: translateY(-50%) rotate(45deg); 🛑
-    // Потому что при top: 50%; и transform: translateY(-50%) rotate (45deg); стрелка позиционируется ниже, чем на макете и чем мне хочется🟢
-
     width: 8px;
     height: 8px;
     border-right: 2px solid currentColor;
@@ -112,7 +113,9 @@
       height: auto;
       border-radius: vars.$br-radius-l;
       padding: 40px;
-      transition: right 0.4s ease, visibility 0.4s ease;
+      transition:
+        right 0.4s ease,
+        visibility 0.4s ease;
       z-index: 999;
       &--active {
         right: 35px;

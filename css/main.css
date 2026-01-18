@@ -637,6 +637,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
+  padding: 28px 50px;
   top: 450px;
   left: 430px;
   max-width: 282px;
