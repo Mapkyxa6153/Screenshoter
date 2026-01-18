@@ -16,7 +16,7 @@
     &::after {
       content: url(/assets/decor/arrow-down.svg);
       position: absolute;
-      top: 605px;
+      top: 605px; // цифра без коммента, стоит пояснить 🛑 и таких цифр много тут, это будет проблема на адаптиве
     }
 
     &-title {
@@ -27,7 +27,7 @@
     &-txt {
       @include mixin.grey-section-txt;
       line-height: vars.$line-height-200;
-      margin: 40px 0px 80px 0;
+      margin: 40px 0px 80px 0; // просто 0, без px 0 🛑
     }
   }
   &__element-ring {
