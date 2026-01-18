@@ -2,17 +2,22 @@
 @use "../utils/mixins" as mixin;
 
 .hero {
-  position: relative;
-  padding-top: 200px;
+  padding-top: 100px;
   &__wrapper {
     @include mixin.flex-row;
     justify-content: space-between;
   }
   &__content {
+    position: relative;
     @include mixin.flex-column;
     align-items: flex-start;
     max-width: 525px;
     margin-right: auto;
+    &::after {
+      content: url(/assets/decor/arrow-down.svg);
+      position: absolute;
+      top: 605px;
+    }
 
     &-title {
       color: vars.$txt-primary-color;
@@ -36,25 +41,36 @@
       position: relative;
       width: 100%;
       max-width: 500px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -88px;
+        left: 35%;
+        width: 800px;
+        height: 740px;
+        border-radius: vars.$br-radius-xl;
+        @include mixin.violet-gradient(180deg);
+        z-index: -1;
+      }
+      &::after {
+        content: url(/assets/decor/hero-line.svg);
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: -100px;
+        left: -950px;
+        z-index: -1;
+      }
     }
-    &-gradient {
-      position: absolute;
-      top: -88px;
-      left: 35%;
-      width: 800px;
-      height: 740px;
-      border-radius: vars.$br-radius-xl;
-      @include mixin.violet-gradient(180deg);
-      z-index: 1;
-    }
+
     &-img {
       position: absolute;
       left: 50px;
       z-index: 2;
     }
     &-card {
-      position: absolute;
       @include mixin.flex-center;
+      position: absolute;
       padding: 28px 50px;
       top: 450px;
       left: 430px;
