@@ -637,7 +637,6 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding: 28px 50px;
   top: 450px;
   left: 430px;
   max-width: 282px;
@@ -662,24 +661,23 @@ body {
   white-space: nowrap;
   padding: 5px;
 }
-
-.highlight::before,
+.highlight::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #7421b0;
+  top: -5px;
+  left: -5px;
+  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
+}
 .highlight::after {
   content: "";
   position: absolute;
   width: 5px;
   height: 5px;
   background-color: #7421b0;
-}
-
-.highlight::before {
-  top: -5px;
-  left: -5px;
-  box-shadow: 105px 0 0 #7421b0, 205px 0 0 #7421b0;
-}
-
-.highlight::after {
   bottom: -5px;
   left: -5px;
-  box-shadow: 105px 0 0 #7421b0, 205px 0 0 #7421b0;
+  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
 }/*# sourceMappingURL=main.css.map */

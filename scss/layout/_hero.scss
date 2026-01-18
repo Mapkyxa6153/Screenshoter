@@ -71,7 +71,6 @@
     &-card {
       @include mixin.flex-center;
       position: absolute;
-      padding: 28px 50px;
       top: 450px;
       left: 430px;
       max-width: 282px;
@@ -92,29 +91,28 @@
   display: inline-block;
   white-space: nowrap;
   padding: 5px;
-}
-
-.highlight::before,
-.highlight::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: vars.$accent-color;
-}
-
-.highlight::before {
-  top: -5px;
-  left: -5px;
-  box-shadow:
-    105px 0 0 vars.$accent-color,
-    205px 0 0 vars.$accent-color;
-}
-
-.highlight::after {
-  bottom: -5px;
-  left: -5px;
-  box-shadow:
-    105px 0 0 vars.$accent-color,
-    205px 0 0 vars.$accent-color;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: vars.$accent-color;
+    top: -5px;
+    left: -5px;
+    box-shadow:
+      107.5px 0 0 vars.$accent-color,
+      215px 0 0 vars.$accent-color;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: vars.$accent-color;
+    bottom: -5px;
+    left: -5px;
+    box-shadow:
+      107.5px 0 0 vars.$accent-color,
+      215px 0 0 vars.$accent-color;
+  }
 }
