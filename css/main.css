@@ -511,11 +511,9 @@ body {
     display: flex;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    blur: 50%;
     position: fixed;
     visibility: hidden;
     top: 50px;
@@ -538,7 +536,7 @@ body {
   }
 }
 .hero {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 .hero__wrapper {
   display: flex;
@@ -568,7 +566,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 200%;
-  margin: 40px 0px 80px 0;
+  margin: 40px 0 80px 0;
 }
 .hero__element-ring {
   filter: blur(10px);
@@ -585,8 +583,8 @@ body {
   content: "";
   position: absolute;
   top: -88px;
-  left: 35%;
-  width: 800px;
+  left: 60%;
+  width: 1500px;
   height: 740px;
   border-radius: 70px;
   background-image: linear-gradient(180deg, #7421b0, #d08eff);
@@ -618,11 +616,9 @@ body {
   min-width: 180px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  blur: 50%;
   color: #f8f9fa;
   z-index: 3;
 }
@@ -636,24 +632,23 @@ body {
   white-space: nowrap;
   padding: 5px;
 }
-
-.highlight::before,
+.highlight::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #7421b0;
+  top: -5px;
+  left: -5px;
+  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
+}
 .highlight::after {
   content: "";
   position: absolute;
   width: 5px;
   height: 5px;
   background-color: #7421b0;
-}
-
-.highlight::before {
-  top: -5px;
-  left: -5px;
-  box-shadow: 105px 0 0 #7421b0, 205px 0 0 #7421b0;
-}
-
-.highlight::after {
   bottom: -5px;
   left: -5px;
-  box-shadow: 105px 0 0 #7421b0, 205px 0 0 #7421b0;
+  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
 }/*# sourceMappingURL=main.css.map */
