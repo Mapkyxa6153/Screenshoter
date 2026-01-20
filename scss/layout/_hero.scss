@@ -2,7 +2,7 @@
 @use "../utils/mixins" as mixin;
 
 .hero {
-  padding-top: 100px;
+  padding-top: 70px;
   &__wrapper {
     @include mixin.flex-row;
     justify-content: space-between;
@@ -14,9 +14,10 @@
     max-width: 525px;
     margin-right: auto;
     &::after {
+      // decorative arrow below CTA button
       content: url(/assets/decor/arrow-down.svg);
       position: absolute;
-      top: 605px;
+      top: 605px; // moves the arrow down from the button
     }
 
     &-title {
@@ -27,7 +28,7 @@
     &-txt {
       @include mixin.grey-section-txt;
       line-height: vars.$line-height-200;
-      margin: 40px 0px 80px 0;
+      margin: 40px 0 80px 0;
     }
   }
   &__element-ring {
@@ -42,22 +43,24 @@
       width: 100%;
       max-width: 500px;
       &::before {
+        // giant gradient element in hero
         content: "";
         position: absolute;
-        top: -88px;
-        left: 35%;
-        width: 800px;
+        top: -88px; //  gradient element placement
+        left: 60%;
+        width: 1500px;
         height: 740px;
         border-radius: vars.$br-radius-xl;
         @include mixin.violet-gradient(180deg);
         z-index: -1;
       }
       &::after {
+        // decorative line in hero
         content: url(/assets/decor/hero-line.svg);
         position: absolute;
         width: 100px;
         height: 100px;
-        top: -100px;
+        top: -100px; // line placement
         left: -950px;
         z-index: -1;
       }
@@ -65,14 +68,15 @@
 
     &-img {
       position: absolute;
-      left: 50px;
+      left: 50px; // hero main img placement
       z-index: 2;
     }
     &-card {
+      // Glass card in hero
       @include mixin.flex-center;
       position: absolute;
       padding: 28px 50px;
-      top: 450px;
+      top: 450px; // Glass card placement
       left: 430px;
       max-width: 282px;
       min-width: 180px;
@@ -93,24 +97,26 @@
   white-space: nowrap;
   padding: 5px;
   &::before {
+    // violet highlight for text
     content: "";
     position: absolute;
     width: 5px;
     height: 5px;
     background-color: vars.$accent-color;
-    top: -5px;
+    top: -5px; // placement for highlight elemets (dots)
     left: -5px;
     box-shadow:
       107.5px 0 0 vars.$accent-color,
       215px 0 0 vars.$accent-color;
   }
   &::after {
+    // violet highlight for text
     content: "";
     position: absolute;
     width: 5px;
     height: 5px;
     background-color: vars.$accent-color;
-    bottom: -5px;
+    bottom: -5px; // placement for highlight elemets (dots)
     left: -5px;
     box-shadow:
       107.5px 0 0 vars.$accent-color,

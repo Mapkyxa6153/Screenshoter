@@ -40,6 +40,7 @@
       transform 0.3s ease,
       color 0.3s ease;
     &::after {
+      // decorative line below the link
       position: absolute;
       bottom: -5px;
       content: "";
@@ -75,6 +76,7 @@
     color: vars.$accent-color;
   }
   &::after {
+    // decorative arrow for language switcher
     content: "";
     position: absolute;
     right: -10px;
