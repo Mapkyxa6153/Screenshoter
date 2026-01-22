@@ -4,7 +4,7 @@
 .hero {
   padding-top: 70px;
   &__wrapper {
-    @include mixin.flex-row;
+    display: flex;
     justify-content: space-between;
   }
   &__content {
@@ -23,6 +23,7 @@
     &-title {
       color: vars.$txt-primary-color;
       font-size: vars.$title-xxl;
+
       margin: 0;
     }
     &-txt {
@@ -54,16 +55,6 @@
         @include mixin.violet-gradient(180deg);
         z-index: -1;
       }
-      &::after {
-        // decorative line in hero
-        content: url(/assets/decor/hero-line.svg);
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        top: -100px; // line placement
-        left: -950px;
-        z-index: -1;
-      }
     }
 
     &-img {
@@ -83,7 +74,24 @@
       border-radius: vars.$br-radius-m;
       @include mixin.glass-effect;
       color: vars.$txt-tertiary-color;
+      line-height: vars.$line-height-160;
       z-index: 3;
+    }
+    &-wave {
+      position: absolute;
+      bottom: -900px;
+      left: 0;
+      transform: translateX(-50%);
+      width: 500%;
+      max-width: 1920px;
+      z-index: 1;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
   }
 }
@@ -95,31 +103,25 @@
   position: relative;
   display: inline-block;
   white-space: nowrap;
-  padding: 5px;
-  &::before {
-    // violet highlight for text
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: vars.$accent-color;
-    top: -5px; // placement for highlight elemets (dots)
-    left: -5px;
-    box-shadow:
-      107.5px 0 0 vars.$accent-color,
-      215px 0 0 vars.$accent-color;
-  }
+  padding: 0 5px; // Здесь появляется вопросы выранвивания текста по тескту ⚠️
+  &::before,
   &::after {
     // violet highlight for text
     content: "";
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: vars.$accent-color;
-    bottom: -5px; // placement for highlight elemets (dots)
-    left: -5px;
     box-shadow:
       107.5px 0 0 vars.$accent-color,
-      215px 0 0 vars.$accent-color;
+      213px 0 0 vars.$accent-color;
+  }
+  &::before {
+    top: -4px; // placement for highlight elemets (dots)
+    left: -4px;
+  }
+  &::after {
+    bottom: -4px;
+    left: -4px;
   }
 }

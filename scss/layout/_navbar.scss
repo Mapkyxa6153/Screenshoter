@@ -12,7 +12,7 @@
     transform: translateY(-100%);
   }
   &__wrapper {
-    @include mixin.flex-row;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
@@ -21,13 +21,13 @@
 
 .navbar {
   &__menu {
-    @include mixin.flex-row;
+    display: flex;
     gap: 60px;
     align-items: center;
   }
   &__list {
+    display: flex;
     list-style: none;
-    @include mixin.flex-row;
     gap: 60px;
   }
   &__item {
@@ -36,6 +36,7 @@
     position: relative;
     color: vars.$link-color;
     line-height: vars.$line-height-150;
+    font-weight: vars.$font-weight-medium;
     transition:
       transform 0.3s ease,
       color 0.3s ease;

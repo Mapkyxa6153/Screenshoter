@@ -2,40 +2,51 @@
 $txt-primary-color: #131313;
 $txt-secondary-color: #828282;
 $txt-tertiary-color: #f8f9fa;
-
+// ================================================
+// Links color
 $link-color: #565656; // only in navbar
 $accent-color: #7421b0; // (txt, bg, hover)
-
+// ================================================
 // Transparent accent color
 $accent-color-transparent: rgba(116, 33, 176, 0.2);
-
+// ================================================
 // Background colors
 $bg-primary-color: #f8f9fa;
 $bg-secondary-color: #fafafa;
 // Gradient second colors
 $end-color: #d08eff;
-
+// ================================================
 // Element
 $element-black-color: #131313; // burger, btn bgc
-
+// ================================================
 // Titles sizes
 $title-xxl: 48px;
 $title-xl: 36px;
 $title-l: 24px;
 $title-m: 20px;
 $title-s: 18px;
-
+// ================================================
 // Text sizes
 $txt-xxl: 18px;
 $txt-xl: 16px;
 $txt-l: 14px;
 $txt-m: 12px;
-
+// ================================================
+// LOGO CONTENT SIZE
+// Title
+$logo-title-l: 24px;
+$logo-title-m: 20px; // approximate size
+$logo-title-s: 16px; // approximate size
+// Subtitle
+$logo-subtitle-l: 9px;
+$logo-subtitle-m: 8px; // approximate size
+$logo-subtitle-s: 7px; // approximate size
+// ================================================
 // Text / Titles weights
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
-
+// ================================================
 // Line height
 $line-height-200: 200%;
 $line-height-180: 180%;
@@ -43,13 +54,13 @@ $line-height-170: 170%;
 $line-height-160: 160%;
 $line-height-150: 150%;
 $line-height-140: 140%;
-
+// ================================================
 // Elements border radius
 $br-radius-xl: 70px; // Squircle
 $br-radius-l: 16px; // FAQ cards
 $br-radius-m: 10px; // regular cards
 $br-radius-s: 5px; // btns
-
+// ================================================
 // Approximate breakpoints
 $breakpoint-xxl: 1150px;
 $breakpoint-xl: 991px;

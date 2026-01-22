@@ -377,7 +377,6 @@ body {
   align-self: center;
 }
 .logo__title {
-  font-size: 20px;
   font-weight: 500;
   color: #7421b0;
   font-size: 24px;
@@ -446,7 +445,6 @@ body {
 }
 .header__wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
@@ -454,14 +452,12 @@ body {
 
 .navbar__menu {
   display: flex;
-  flex-direction: row;
   gap: 60px;
   align-items: center;
 }
 .navbar__list {
-  list-style: none;
   display: flex;
-  flex-direction: row;
+  list-style: none;
   gap: 60px;
 }
 .navbar__item {
@@ -470,6 +466,7 @@ body {
   position: relative;
   color: #565656;
   line-height: 150%;
+  font-weight: 500;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .navbar__item::after {
@@ -566,7 +563,6 @@ body {
 }
 .hero__wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .hero__content {
@@ -616,15 +612,6 @@ body {
   background-image: linear-gradient(180deg, #7421b0, #d08eff);
   z-index: -1;
 }
-.hero__media-composition::after {
-  content: url(/assets/decor/hero-line.svg);
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -100px;
-  left: -950px;
-  z-index: -1;
-}
 .hero__media-img {
   position: absolute;
   left: 50px;
@@ -646,7 +633,23 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f8f9fa;
+  line-height: 160%;
   z-index: 3;
+}
+.hero__media-wave {
+  position: absolute;
+  bottom: -900px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 500%;
+  max-width: 1920px;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__media-wave img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .highlight {
@@ -656,25 +659,21 @@ body {
   position: relative;
   display: inline-block;
   white-space: nowrap;
-  padding: 5px;
+  padding: 0 5px;
+}
+.highlight::before, .highlight::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #7421b0;
+  box-shadow: 107.5px 0 0 #7421b0, 213px 0 0 #7421b0;
 }
 .highlight::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #7421b0;
-  top: -5px;
-  left: -5px;
-  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
+  top: -4px;
+  left: -4px;
 }
 .highlight::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #7421b0;
-  bottom: -5px;
-  left: -5px;
-  box-shadow: 107.5px 0 0 #7421b0, 215px 0 0 #7421b0;
+  bottom: -4px;
+  left: -4px;
 }/*# sourceMappingURL=main.css.map */

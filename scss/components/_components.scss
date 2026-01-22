@@ -28,7 +28,6 @@
   }
 
   &__title {
-    font-size: 20px;
     font-weight: vars.$font-weight-medium;
     color: vars.$accent-color;
     font-size: vars.$title-l;
@@ -38,7 +37,7 @@
 
   &__subtitle {
     font-size: 9px;
-    font-weight: 400;
+    font-weight: vars.$font-weight-regular;
     color: vars.$txt-secondary-color;
     grid-area: subtitle;
   }
@@ -73,7 +72,9 @@
 
   @include mixin.hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(vars.$accent-color, 0.4), 0 15px 40px rgba(vars.$accent-color, 0.2);
+    box-shadow:
+      0 6px 20px rgba(vars.$accent-color, 0.4),
+      0 15px 40px rgba(vars.$accent-color, 0.2);
   }
   &:active {
     transform: scale(0.9);
