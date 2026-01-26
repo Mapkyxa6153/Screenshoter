@@ -316,22 +316,29 @@ template {
 
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Regular.woff2") format "woff2";
+  src: url("/assets/fonts/rubik/Rubik-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Medium.woff2") format "woff2";
+  src: url("/assets/fonts/rubik/Rubik-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Bold.woff2") format "woff2";
+  src: url("/assets/fonts/rubik/Rubik-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/inter/Inter-VariableFont_opsz,wght.woff2") format("woff2-variations");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -377,16 +384,18 @@ body {
   align-self: center;
 }
 .logo__title {
-  font-weight: 500;
+  font-family: "Inter Variable", sans-serif;
+  font-weight: 700;
   color: #7421b0;
   font-size: 24px;
   letter-spacing: 1.5px;
   grid-area: title;
 }
 .logo__subtitle {
+  font-family: "Inter Variable", sans-serif;
   font-size: 9px;
   font-weight: 400;
-  color: #828282;
+  color: #484848;
   grid-area: subtitle;
 }
 
@@ -639,10 +648,9 @@ body {
 .hero__media-wave {
   position: absolute;
   bottom: -900px;
-  left: 0;
+  left: -100px;
   transform: translateX(-50%);
   width: 500%;
-  max-width: 1920px;
   z-index: 1;
   pointer-events: none;
 }
@@ -667,7 +675,7 @@ body {
   width: 6px;
   height: 6px;
   background-color: #7421b0;
-  box-shadow: 107.5px 0 0 #7421b0, 213px 0 0 #7421b0;
+  box-shadow: 107.5px 0 0 #7421b0, 204px 0 0 #7421b0;
 }
 .highlight::before {
   top: -4px;

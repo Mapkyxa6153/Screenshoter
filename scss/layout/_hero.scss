@@ -59,6 +59,7 @@
 
     &-img {
       position: absolute;
+
       left: 50px; // hero main img placement
       z-index: 2;
     }
@@ -80,10 +81,9 @@
     &-wave {
       position: absolute;
       bottom: -900px;
-      left: 0;
+      left: -100px;
       transform: translateX(-50%);
       width: 500%;
-      max-width: 1920px;
       z-index: 1;
       pointer-events: none;
 
@@ -114,7 +114,7 @@
     background-color: vars.$accent-color;
     box-shadow:
       107.5px 0 0 vars.$accent-color,
-      213px 0 0 vars.$accent-color;
+      204px 0 0 vars.$accent-color;
   }
   &::before {
     top: -4px; // placement for highlight elemets (dots)
@@ -125,3 +125,13 @@
     left: -4px;
   }
 }
+
+// @media (max-width: vars.$breakpoint-xl) {
+//   .hero {
+//     &__media {
+//       &-img {
+//         width: 368px;
+//       }
+//     }
+//   }
+// }

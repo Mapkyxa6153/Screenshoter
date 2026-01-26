@@ -28,7 +28,8 @@
   }
 
   &__title {
-    font-weight: vars.$font-weight-medium;
+    font-family: "Inter Variable", sans-serif;
+    font-weight: vars.$font-weight-bold;
     color: vars.$accent-color;
     font-size: vars.$title-l;
     letter-spacing: 1.5px;
@@ -36,9 +37,10 @@
   }
 
   &__subtitle {
+    font-family: "Inter Variable", sans-serif;
     font-size: 9px;
     font-weight: vars.$font-weight-regular;
-    color: vars.$txt-secondary-color;
+    color: vars.$logo-subtitle-color;
     grid-area: subtitle;
   }
 }
