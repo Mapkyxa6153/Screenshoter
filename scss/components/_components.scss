@@ -64,6 +64,9 @@
   background-color: vars.$element-black-color;
   border-radius: vars.$br-radius-s;
   transition: transform 0.3s ease;
+  @media (max-width: vars.$breakpoint-xl) {
+    font-size: vars.$txt-m;
+  }
 }
 
 .btn-violet {
