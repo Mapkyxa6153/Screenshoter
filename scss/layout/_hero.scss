@@ -5,10 +5,20 @@
   padding-top: 70px;
   position: relative;
   overflow-x: clip;
+  @media (max-width: vars.$breakpoint-xl) {
+    padding-top: 170px;
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
+    @media (max-width: vars.$breakpoint-xxl) {
+      gap: 60px;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      gap: 42px;
+    }
     @media (max-width: vars.$breakpoint-l) {
       flex-direction: column;
       align-items: center;
@@ -19,8 +29,10 @@
     position: relative;
     @include mixin.flex-column;
     align-items: flex-start;
-    max-width: 525px;
-    margin-right: auto;
+    flex: 0 1 50%;
+    @media (max-width: vars.$breakpoint-xl) {
+      flex: 0 1 40%;
+    }
     @media (max-width: vars.$breakpoint-l) {
       order: 2;
     }
@@ -28,30 +40,53 @@
       // decorative arrow below CTA button
       content: url(/assets/decor/arrow-down.svg);
       position: absolute;
-      top: 605px; // moves the arrow down from the button
+      top: 140%; // moves the arrow down from the button
+      @media (max-width: vars.$breakpoint-xxl) {
+        top: 120%;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        display: none;
+      }
     }
 
     &-title {
       color: vars.$txt-primary-color;
       font-size: vars.$title-xxl;
       margin: 0;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-l;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        text-align: center;
+      }
     }
     &-txt {
       @include mixin.grey-section-txt;
       line-height: vars.$line-height-200;
       margin: 40px 0 80px 0;
+      z-index: 2;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-m;
+        margin: 20px 0 30px 0;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        text-align: center;
+      }
     }
   }
   &__element-ring {
     -webkit-filter: blur(10px);
     filter: blur(10px);
-    @media (max-width: vars.$breakpoint-l) {
+    @media (max-width: vars.$breakpoint-xl) {
       display: none;
     }
   }
   &__media {
     flex: 0 1 50%;
     position: relative;
+    @media (max-width: vars.$breakpoint-xl) {
+      flex: 0 1 60%;
+    }
     @media (max-width: vars.$breakpoint-l) {
       order: 1;
     }
@@ -72,9 +107,25 @@
       border-radius: vars.$br-radius-xl;
       @include mixin.violet-gradient(180deg);
       z-index: -1;
+      @media (max-width: vars.$breakpoint-xl) {
+        left: 40%;
+        bottom: 30%;
+        height: 170%;
+      }
+
+      @media (max-width: vars.$breakpoint-gradient) {
+        left: 40%;
+        bottom: 20%;
+        height: 210%;
+      }
       @media (max-width: vars.$breakpoint-l) {
-        bottom: 45%;
-        height: 140%;
+        left: 20%;
+        bottom: 35%;
+        height: 170%;
+      }
+      @media (max-width: vars.$breakpoint-m) {
+        bottom: 30%;
+        height: 200%;
       }
     }
 
@@ -88,7 +139,7 @@
       // Glass card in hero
       @include mixin.flex-center;
       position: absolute;
-      padding: 28px 50px;
+      padding: 28px 45px;
       top: 90%;
       left: 45%;
       border-radius: vars.$br-radius-m;
@@ -96,6 +147,12 @@
       color: vars.$txt-tertiary-color;
       line-height: vars.$line-height-160;
       z-index: 3;
+      @media (max-width: vars.$breakpoint-xxl) {
+        padding: 23px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-m;
+      }
       @media (max-width: vars.$breakpoint-l) {
         left: 25%;
       }
@@ -148,5 +205,13 @@
   &::after {
     bottom: -4px;
     left: -4px;
+  }
+  @media (max-width: vars.$breakpoint-xl) {
+    &::before,
+    &::after {
+      box-shadow:
+        54px 0 0 vars.$accent-color,
+        108px 0 0 vars.$accent-color;
+    }
   }
 }

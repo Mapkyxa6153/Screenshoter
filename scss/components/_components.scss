@@ -74,6 +74,13 @@
   transition: 0.5s;
   position: relative;
   overflow: hidden;
+  z-index: 2;
+  @media (max-width: vars.$breakpoint-l) {
+    align-self: center;
+  }
+  @media (max-width: vars.$breakpoint-hero-btn) {
+    padding: 23px 30px;
+  }
 
   @include mixin.hover {
     transform: translateY(-2px);

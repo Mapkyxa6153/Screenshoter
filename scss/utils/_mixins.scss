@@ -56,10 +56,10 @@
   margin: 0 auto;
   padding: 0 50px;
 
-  @media (max-width: 991px) {
+  @media (max-width: vars.$breakpoint-xl) {
     max-width: 900px;
   }
-  @media (max-width: 575px) {
-    padding: 0 30px;
+  @media (max-width: vars.$breakpoint-m) {
+    padding: 0 20px;
   }
 }

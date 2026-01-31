@@ -16,6 +16,9 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
+    @media (max-width: vars.$breakpoint-xl) {
+      padding-top: 20px;
+    }
   }
 }
 
@@ -24,11 +27,42 @@
     display: flex;
     gap: 60px;
     align-items: center;
+    @media (max-width: vars.$breakpoint-xxl) {
+      gap: 30px;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      @include mixin.flex-column;
+      @include mixin.glass-effect;
+      position: fixed;
+      visibility: hidden;
+      top: 50px;
+      right: -100%;
+      width: auto;
+      height: auto;
+      border-radius: vars.$br-radius-l;
+      padding: 40px;
+      transition:
+        right 0.4s ease,
+        visibility 0.4s ease;
+      z-index: 999;
+      &--active {
+        right: 35px;
+        visibility: visible;
+      }
+    }
   }
   &__list {
     display: flex;
     list-style: none;
     gap: 60px;
+    @media (max-width: vars.$breakpoint-xxl) {
+      gap: 29px;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
   }
   &__item {
     display: block;
@@ -91,44 +125,5 @@
   }
   &:active {
     transform: translateY(3px);
-  }
-}
-@media (max-width: vars.$breakpoint-xxl) {
-  .navbar {
-    &__menu {
-      gap: 30px;
-    }
-    &__list {
-      gap: 29px;
-    }
-  }
-}
-@media (max-width: vars.$breakpoint-xl) {
-  .navbar {
-    &__menu {
-      @include mixin.flex-column;
-      @include mixin.glass-effect;
-      position: fixed;
-      visibility: hidden;
-      top: 50px;
-      right: -100%;
-      width: auto;
-      height: auto;
-      border-radius: vars.$br-radius-l;
-      padding: 40px;
-      transition:
-        right 0.4s ease,
-        visibility 0.4s ease;
-      z-index: 999;
-      &--active {
-        right: 35px;
-        visibility: visible;
-      }
-    }
-    &__list {
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
-    }
   }
 }
