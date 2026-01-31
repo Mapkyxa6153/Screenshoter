@@ -3,9 +3,17 @@
 
 .hero {
   padding-top: 70px;
+  position: relative;
+  overflow-x: clip;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    @media (max-width: vars.$breakpoint-l) {
+      flex-direction: column;
+      align-items: center;
+      gap: 160px;
+    }
   }
   &__content {
     position: relative;
@@ -13,6 +21,9 @@
     align-items: flex-start;
     max-width: 525px;
     margin-right: auto;
+    @media (max-width: vars.$breakpoint-l) {
+      order: 2;
+    }
     &::after {
       // decorative arrow below CTA button
       content: url(/assets/decor/arrow-down.svg);
@@ -23,7 +34,6 @@
     &-title {
       color: vars.$txt-primary-color;
       font-size: vars.$title-xxl;
-
       margin: 0;
     }
     &-txt {
@@ -35,32 +45,43 @@
   &__element-ring {
     -webkit-filter: blur(10px);
     filter: blur(10px);
+    @media (max-width: vars.$breakpoint-l) {
+      display: none;
+    }
   }
   &__media {
     flex: 0 1 50%;
+    position: relative;
+    @media (max-width: vars.$breakpoint-l) {
+      order: 1;
+    }
 
-    &-composition {
+    &-wrapper {
       position: relative;
+      @include mixin.flex-center;
       width: 100%;
-      max-width: 500px;
-      &::before {
-        // giant gradient element in hero
-        content: "";
-        position: absolute;
-        top: -88px; //  gradient element placement
-        left: 60%;
-        width: 1500px;
-        height: 740px;
-        border-radius: vars.$br-radius-xl;
-        @include mixin.violet-gradient(180deg);
-        z-index: -1;
+    }
+    &-gradient {
+      // giant gradient element in hero
+      position: absolute;
+      width: 1500px;
+      height: 180%;
+      left: 20%;
+      bottom: 35%;
+      transform: translateY(50%);
+      border-radius: vars.$br-radius-xl;
+      @include mixin.violet-gradient(180deg);
+      z-index: -1;
+      @media (max-width: vars.$breakpoint-l) {
+        bottom: 45%;
+        height: 140%;
       }
     }
 
     &-img {
-      position: absolute;
-
-      left: 50px; // hero main img placement
+      position: relative;
+      width: 100%;
+      height: auto;
       z-index: 2;
     }
     &-card {
@@ -68,29 +89,32 @@
       @include mixin.flex-center;
       position: absolute;
       padding: 28px 50px;
-      top: 450px; // Glass card placement
-      left: 430px;
-      max-width: 282px;
-      min-width: 180px;
+      top: 90%;
+      left: 45%;
       border-radius: vars.$br-radius-m;
       @include mixin.glass-effect;
       color: vars.$txt-tertiary-color;
       line-height: vars.$line-height-160;
       z-index: 3;
+      @media (max-width: vars.$breakpoint-l) {
+        left: 25%;
+      }
     }
     &-wave {
       position: absolute;
-      bottom: -900px;
-      left: -100px;
-      transform: translateX(-50%);
-      width: 500%;
+      width: 250%;
+      left: -135%;
+      bottom: -110%;
       z-index: 1;
       pointer-events: none;
+      @media (max-width: vars.$breakpoint-l) {
+        bottom: -65%;
+        left: -95%;
+      }
 
       img {
         width: 100%;
         height: auto;
-        display: block;
       }
     }
   }
@@ -103,7 +127,8 @@
   position: relative;
   display: inline-block;
   white-space: nowrap;
-  padding: 0 5px; // Здесь появляется вопросы выранвивания текста по тескту ⚠️
+  padding: 0 5px;
+  margin: 0 -5px; // correcting highlight element placement according to the rest of the contet
   &::before,
   &::after {
     // violet highlight for text
@@ -113,7 +138,7 @@
     height: 6px;
     background-color: vars.$accent-color;
     box-shadow:
-      107.5px 0 0 vars.$accent-color,
+      103px 0 0 vars.$accent-color,
       204px 0 0 vars.$accent-color;
   }
   &::before {
@@ -125,13 +150,3 @@
     left: -4px;
   }
 }
-
-// @media (max-width: vars.$breakpoint-xl) {
-//   .hero {
-//     &__media {
-//       &-img {
-//         width: 368px;
-//       }
-//     }
-//   }
-// }
