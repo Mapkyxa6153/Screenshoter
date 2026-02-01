@@ -33,9 +33,7 @@
     @media (max-width: vars.$breakpoint-xl) {
       flex: 0 1 40%;
     }
-    @media (max-width: vars.$breakpoint-l) {
-      order: 2;
-    }
+
     &::after {
       // decorative arrow below CTA button
       content: url(/assets/decor/arrow-down.svg);
@@ -88,7 +86,7 @@
       flex: 0 1 60%;
     }
     @media (max-width: vars.$breakpoint-l) {
-      order: 1;
+      order: -1;
     }
 
     &-wrapper {
@@ -148,12 +146,16 @@
       line-height: vars.$line-height-160;
       z-index: 3;
       @media (max-width: vars.$breakpoint-xxl) {
-        padding: 23px;
+        left: 40%;
+        padding: 25px;
       }
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$txt-m;
+        left: 43%;
+        min-width: 135px;
       }
       @media (max-width: vars.$breakpoint-l) {
+        min-width: none;
         left: 25%;
       }
     }
@@ -214,4 +216,8 @@
         108px 0 0 vars.$accent-color;
     }
   }
+}
+
+.introduction {
+  height: 1500px;
 }

@@ -1,5 +1,8 @@
+@use "../utils/variables" as vars;
+
 body {
   font-family: "Rubik", sans-serif;
+  background-color: vars.$bg-primary-color;
 }
 
 .no-scroll {
