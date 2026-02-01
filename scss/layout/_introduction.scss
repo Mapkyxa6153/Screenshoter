@@ -2,13 +2,29 @@
 @use "../utils/mixins" as mixin;
 
 .introduction {
+  margin-bottom: 250px;
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 150px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 60px;
+  }
   &__content {
     @include mixin.section-content;
     &-title {
+      flex: 0 1 40%;
       @include mixin.section-title;
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+      }
     }
     &-txt {
+      flex: 0 1 40%;
+
       @include mixin.section-txt;
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+      }
     }
   }
   &__cards {

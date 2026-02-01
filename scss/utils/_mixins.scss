@@ -92,15 +92,16 @@
     background-color 0.5s ease-in-out,
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
+  @media (max-width: vars.$breakpoint-l) {
+    flex-direction: row;
+    align-items: center;
+  }
   @include hover {
     background-color: vars.$accent-color;
     color: vars.$txt-tertiary-color;
     transform: scale(1.05);
     transform: translateY(-3px);
     box-shadow: 0 26px 48px -23px vars.$accent-color;
-    // box-shadow:
-    //   0 6px 20px rgba(vars.$accent-color, 0.4),
-    //   0 15px 40px rgba(vars.$accent-color, 0.2);
   }
 
   & img {
@@ -134,16 +135,13 @@
 }
 
 @mixin section-title {
-  flex: 0 1 40%;
   font-size: vars.$title-xl;
   margin: 0;
   &--violet {
     color: vars.$accent-color;
     white-space: nowrap;
   }
-  @media (max-width: vars.$breakpoint-xxl) {
-    flex: 0 1 50%;
-  }
+
   @media (max-width: vars.$breakpoint-xl) {
     font-size: vars.$title-m;
   }
@@ -153,16 +151,13 @@
 }
 
 @mixin section-txt {
-  flex: 0 1 40%;
   font-size: vars.$txt-xxl;
   color: vars.$txt-secondary-color;
   line-height: vars.$line-height-200;
   &--black {
     color: vars.$txt-primary-color;
   }
-  @media (max-width: vars.$breakpoint-xxl) {
-    flex: 0 1 50%;
-  }
+
   @media (max-width: vars.$breakpoint-xl) {
     font-size: vars.$txt-m;
   }
