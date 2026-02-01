@@ -873,6 +873,17 @@ body {
   gap: 140px;
   margin-bottom: 80px;
 }
+@media (max-width: 1150px) {
+  .introduction__content {
+    gap: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .introduction__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .introduction__content-title {
   flex: 0 1 40%;
   font-size: 36px;
@@ -890,7 +901,6 @@ body {
 @media (max-width: 991px) {
   .introduction__content-title {
     font-size: 20px;
-    flex: 0 1 50%;
   }
 }
 @media (max-width: 575px) {
@@ -920,17 +930,6 @@ body {
 @media (max-width: 575px) {
   .introduction__content-txt {
     text-align: center;
-  }
-}
-@media (max-width: 1150px) {
-  .introduction__content {
-    gap: 50px;
-  }
-}
-@media (max-width: 575px) {
-  .introduction__content {
-    flex-direction: column;
-    gap: 20px;
   }
 }
 .introduction__cards {
