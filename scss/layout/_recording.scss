@@ -2,6 +2,7 @@
 @use "../utils/mixins" as mixin;
 
 .recording {
+  position: relative;
   overflow-x: clip;
   margin-bottom: 100px;
   &__wrapper {
@@ -24,37 +25,41 @@
     }
     &-gif {
       z-index: 0;
-      width: 50%;
+      width: 100%;
+      max-width: 400px;
     }
     &-glass {
       position: absolute;
-      width: 1500px;
-      height: 130%;
-      left: -170%;
-      top: -10%;
+      left: 0;
+      top: 30%;
+      width: 35vw;
+      height: 80%;
       z-index: -1;
-      border-radius: vars.$br-radius-xl;
+      border-radius: 0 vars.$br-radius-xl vars.$br-radius-xl 0;
       //   @include mixin.glass-effect;
-      background-color: rgb(159, 116, 116);
+      background-color: green;
+      opacity: 0.3;
+      pointer-events: none;
       @media (max-width: vars.$breakpoint-xl) {
-        left: -200%;
-        height: 150%;
+        width: 50vw;
+        top: 15%;
+        height: 60%;
       }
       @media (max-width: vars.$breakpoint-l) {
-        left: -230%;
-        height: 100%;
+        width: 60vw;
+        border-radius: vars.$br-radius-xl;
       }
     }
     &-wave {
       position: absolute;
       top: -90%;
       left: -35%;
-      z-index: -2;
+      z-index: -3;
     }
   }
   &__element-ring {
     position: relative;
-    z-index: -1;
+    z-index: -2;
   }
   &__content {
     flex: 0 1 50%;
@@ -70,9 +75,15 @@
       justify-content: space-between;
     }
     &-title {
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 1 50%;
+      }
       @include mixin.section-title;
     }
     &-txt {
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 1 50%;
+      }
       @include mixin.section-txt;
       &--wrapper {
         display: flex;

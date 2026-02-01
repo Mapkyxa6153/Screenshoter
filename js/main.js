@@ -72,3 +72,11 @@ document.addEventListener("keydown", (e) => {
 
 // Моб меню цвет текста надо поменять ⚠️
 // Поствил пока белый цвет, но тоже как будто такое себе
+
+// navbar mobile menu, navbar (header while scroll is transparrent) ⚠️
+
+// Recording glass element ⚠️
+
+// Recording mixins ⚠️
+
+// Recording margin-bottom is approximate ⚠️
