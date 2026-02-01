@@ -1,0 +1,103 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.introduction {
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 140px;
+    margin-bottom: 80px;
+    &-title {
+      flex: 0 1 40%;
+      font-size: vars.$title-xl;
+      margin: 0;
+      &--violet {
+        color: vars.$accent-color;
+        white-space: nowrap;
+      }
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-m;
+        flex: 0 1 50%;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        text-align: center;
+      }
+    }
+    &-txt {
+      flex: 0 1 40%;
+      font-size: vars.$txt-xxl;
+      color: vars.$txt-secondary-color;
+      line-height: vars.$line-height-200;
+      &--black {
+        color: vars.$txt-primary-color;
+      }
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-m;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        text-align: center;
+      }
+    }
+    @media (max-width: vars.$breakpoint-xxl) {
+      gap: 50px;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    @media (max-width: vars.$breakpoint-xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      grid-template-columns: 1fr;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px;
+      border-radius: vars.$br-radius-m;
+      box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
+      transition:
+        color 0.3s ease,
+        background-color 0.5s ease-in-out,
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+      @include mixin.hover {
+        background-color: vars.$accent-color;
+        color: vars.$txt-tertiary-color;
+        transform: scale(1.05);
+        transform: translateY(-3px);
+        box-shadow: 0 26px 48px -23px vars.$accent-color;
+      }
+
+      & img {
+        width: 80px;
+        @media (max-width: vars.$breakpoint-xl) {
+          width: 60px;
+        }
+      }
+      & span {
+        font-size: vars.$title-m;
+        font-weight: vars.$font-weight-medium;
+        line-height: vars.$line-height-160;
+        @media (max-width: vars.$breakpoint-xl) {
+          font-size: vars.$txt-xxl;
+        }
+      }
+    }
+  }
+}

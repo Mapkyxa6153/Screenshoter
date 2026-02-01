@@ -5,8 +5,18 @@
   padding-top: 70px;
   position: relative;
   overflow-x: clip;
+  margin-bottom: 450px;
+  @media (max-width: vars.$breakpoint-introduction-margin) {
+    margin-bottom: 300px;
+  }
   @media (max-width: vars.$breakpoint-xl) {
     padding-top: 170px;
+  }
+  @media (max-width: vars.$breakpoint-xxl) {
+    margin-bottom: 250px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 60px;
   }
 
   &__wrapper {
@@ -179,7 +189,7 @@
   }
 }
 
-.highlight {
+.hero-highlight {
   background-color: vars.$accent-color-transparent;
   color: vars.$accent-color;
   border: 2px solid vars.$accent-color;
@@ -216,8 +226,4 @@
         108px 0 0 vars.$accent-color;
     }
   }
-}
-
-.introduction {
-  height: 1500px;
 }

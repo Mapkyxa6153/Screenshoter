@@ -16,10 +16,9 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
+    border-radius: 20px 0;
     @media (max-width: vars.$breakpoint-xl) {
       padding: 20px 50px;
-      border-radius: 20px 0;
-      background-color: vars.$bg-primary-color;
     }
     @media (max-width: vars.$breakpoint-l) {
       padding: 20px;
@@ -73,7 +72,7 @@
     display: block;
     text-decoration: none;
     position: relative;
-    color: vars.$txt-tertiary-color;
+    color: vars.$link-color;
     line-height: vars.$line-height-150;
     font-weight: vars.$font-weight-medium;
     transition:
@@ -130,8 +129,5 @@
   }
   &:active {
     transform: translateY(3px);
-  }
-  @media (max-width: vars.$breakpoint-xl) {
-    color: vars.$txt-tertiary-color;
   }
 }
