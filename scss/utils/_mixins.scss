@@ -79,7 +79,7 @@
     grid-template-columns: 1fr;
   }
 }
-
+// Items from the lists described above ⬆️⬆️⬆️
 @mixin list-item {
   display: flex;
   flex-direction: column;
@@ -120,6 +120,7 @@
   }
 }
 
+// Section's text content placement
 @mixin section-content {
   display: flex;
   justify-content: flex-start;
@@ -134,6 +135,7 @@
   }
 }
 
+// The title here is related to the sections mentione above ⬆️⬆️⬆️
 @mixin section-title {
   font-size: vars.$title-xl;
   margin: 0;
@@ -150,6 +152,7 @@
   }
 }
 
+// Related to the sections above ⬆️⬆️⬆️
 @mixin section-txt {
   font-size: vars.$txt-xxl;
   color: vars.$txt-secondary-color;
@@ -163,5 +166,18 @@
   }
   @media (max-width: vars.$breakpoint-l) {
     text-align: center;
+  }
+}
+
+@mixin gif-section($direction) {
+  display: flex;
+  gap: 150px;
+  flex-direction: $direction;
+  @media (max-width: vars.$breakpoint-xl) {
+    flex-direction: column;
+    gap: 60px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    gap: 30px;
   }
 }

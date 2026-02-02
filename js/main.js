@@ -75,7 +75,8 @@ document.addEventListener("keydown", (e) => {
 
 // navbar mobile menu, navbar (header while scroll is transparrent) ⚠️
 
-// Recording glass element ⚠️
+// Recording glass element ✅
+// UPDATE MIXIN ⚠️
 
 // Recording mixins ⚠️
 
