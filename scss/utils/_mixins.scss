@@ -172,6 +172,7 @@
 // Gif sections' elements placement
 @mixin gif-section($direction) {
   display: flex;
+  align-items: center;
   gap: 150px;
   flex-direction: $direction;
   @media (max-width: vars.$breakpoint-xl) {
