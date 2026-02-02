@@ -1029,13 +1029,17 @@ body {
 .recording__media-wrapper {
   display: flex;
   justify-content: center;
-  position: relative;
   flex: 0 1 50%;
+  position: relative;
 }
-.recording__media-gif {
-  z-index: 0;
+.recording__media-wrapper video {
   width: 100%;
   max-width: 400px;
+}
+@media (max-width: 575px) {
+  .recording__media-wrapper video {
+    width: 75%;
+  }
 }
 .recording__media-glass {
   position: absolute;
@@ -1096,7 +1100,7 @@ body {
 }
 @media (max-width: 991px) {
   .recording__content-title {
-    flex: 0 1 50%;
+    flex: 0 0 35%;
   }
 }
 .recording__content-title--violet {
@@ -1120,7 +1124,7 @@ body {
 }
 @media (max-width: 991px) {
   .recording__content-txt {
-    flex: 0 1 50%;
+    flex: 0 1 65%;
   }
 }
 .recording__content-txt--black {
