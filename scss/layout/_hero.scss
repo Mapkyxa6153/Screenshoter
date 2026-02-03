@@ -71,11 +71,11 @@
     &-txt {
       @include mixin.grey-section-txt;
       line-height: vars.$line-height-200;
-      margin: 40px 0 80px 0;
+      margin: 40px 0 80px 0; // это пишется в 3 значном формате: top right&left bottom
       z-index: 2;
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$txt-m;
-        margin: 20px 0 30px 0;
+        margin: 20px 0 30px 0; // это пишется в 3 значном формате: top right&left bottom
       }
       @media (max-width: vars.$breakpoint-l) {
         text-align: center;
@@ -140,7 +140,7 @@
     &-img {
       position: relative;
       width: 100%;
-      height: auto;
+      height: auto; // точно надо? это же значение по умолчанию для img
       z-index: 2;
     }
     &-card {
@@ -165,7 +165,7 @@
         min-width: 135px;
       }
       @media (max-width: vars.$breakpoint-l) {
-        min-width: none;
+        min-width: none; // none — невалидное значение для min-width, нужно использовать auto или unset
         left: 25%;
       }
     }
