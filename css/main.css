@@ -665,14 +665,9 @@ body {
 .hero__content::after {
   content: url(/assets/decor/arrow-down.svg);
   position: absolute;
-  top: 140%;
+  top: 130%;
 }
-@media (max-width: 1150px) {
-  .hero__content::after {
-    top: 120%;
-  }
-}
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .hero__content::after {
     display: none;
   }
@@ -712,7 +707,6 @@ body {
   }
 }
 .hero__element-ring {
-  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 @media (max-width: 991px) {
@@ -743,40 +737,27 @@ body {
 }
 .hero__media-gradient {
   position: absolute;
-  width: 1500px;
-  height: 180%;
-  left: 20%;
-  bottom: 35%;
+  width: 40vw;
+  height: 85%;
+  right: 0;
+  bottom: 20%;
   transform: translateY(50%);
-  border-radius: 35px;
+  border-radius: 35px 0 0 35px;
   background-image: linear-gradient(180deg, #7421b0, #d08eff);
   z-index: -1;
 }
 @media (max-width: 991px) {
   .hero__media-gradient {
-    left: 40%;
-    bottom: 30%;
-    height: 170%;
-  }
-}
-@media (max-width: 900px) {
-  .hero__media-gradient {
-    left: 40%;
     bottom: 20%;
-    height: 210%;
+    width: 35vw;
+    height: 100%;
   }
 }
 @media (max-width: 575px) {
   .hero__media-gradient {
-    left: 20%;
-    bottom: 35%;
-    height: 170%;
-  }
-}
-@media (max-width: 400px) {
-  .hero__media-gradient {
-    bottom: 30%;
-    height: 200%;
+    height: 45%;
+    bottom: 60%;
+    width: 85vw;
   }
 }
 .hero__media-img {
@@ -823,11 +804,16 @@ body {
 }
 .hero__media-wave {
   position: absolute;
-  width: 250%;
-  left: -135%;
+  left: -170%;
   bottom: -110%;
   z-index: 1;
   pointer-events: none;
+}
+@media (max-width: 991px) {
+  .hero__media-wave {
+    bottom: -65%;
+    left: -95%;
+  }
 }
 @media (max-width: 575px) {
   .hero__media-wave {
@@ -836,8 +822,7 @@ body {
   }
 }
 .hero__media-wave img {
-  width: 100%;
-  height: auto;
+  width: 100vw;
 }
 
 .hero-highlight {
@@ -1040,11 +1025,18 @@ body {
 }
 .recording__media-wrapper video {
   width: 100%;
-  max-width: 400px;
+}
+@media (max-width: 991px) {
+  .recording__media-wrapper {
+    align-self: stretch;
+  }
+  .recording__media-wrapper video {
+    width: 80%;
+  }
 }
 @media (max-width: 575px) {
   .recording__media-wrapper video {
-    width: 75%;
+    width: 100%;
   }
 }
 .recording__media-glass {
@@ -1075,8 +1067,17 @@ body {
 .recording__media-wave {
   position: absolute;
   top: -90%;
-  left: -35%;
+  left: -100%;
+  transform: translateX(50%);
   z-index: -3;
+}
+.recording__media-wave img {
+  width: 100vw;
+}
+@media (max-width: 1150px) {
+  .recording__media-wave {
+    left: 10%;
+  }
 }
 .recording__element-ring {
   position: relative;
@@ -1153,4 +1154,4 @@ body {
 }
 .recording__content-txt--violet {
   color: #7421b0;
-}
+}/*# sourceMappingURL=main.css.map */

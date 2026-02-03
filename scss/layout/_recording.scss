@@ -37,8 +37,16 @@
     &-wave {
       position: absolute;
       top: -90%;
-      left: -35%;
+      // left: -200%;
+      left: -100%;
+      transform: translateX(50%);
       z-index: -3;
+      & img {
+        width: 100vw;
+      }
+      @media (max-width: vars.$breakpoint-xxl) {
+        left: 10%;
+      }
     }
   }
   &__element-ring {
