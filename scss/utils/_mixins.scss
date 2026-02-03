@@ -100,7 +100,7 @@
     background-color: vars.$accent-color;
     color: vars.$txt-tertiary-color;
     transform: scale(1.05);
-    transform: translateY(-3px);
+    transform: translateY(-3px); // трансформы пишутся вместе, сейчас второй перезаписывает первый
     box-shadow: 0 26px 48px -23px vars.$accent-color;
   }
 
