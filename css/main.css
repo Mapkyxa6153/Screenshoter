@@ -374,7 +374,7 @@ body {
   grid-template-rows: auto 1fr;
   grid-template-areas: "icon title" "icon subtitle";
   text-decoration: none;
-  -moz-column-gap: 10px;
+  -moz-column-gap: 7px;
   column-gap: 7px;
 }
 .logo__icon {
@@ -712,6 +712,7 @@ body {
   }
 }
 .hero__element-ring {
+  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 @media (max-width: 991px) {
@@ -1152,4 +1153,4 @@ body {
 }
 .recording__content-txt--violet {
   color: #7421b0;
-}/*# sourceMappingURL=main.css.map */
+}
