@@ -630,8 +630,12 @@ body {
 }
 .hero__wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 200px;
+}
+@media (max-width: 1250px) {
+  .hero__wrapper {
+    gap: 100px;
+  }
 }
 @media (max-width: 1150px) {
   .hero__wrapper {
@@ -665,7 +669,12 @@ body {
 .hero__content::after {
   content: url(/assets/decor/arrow-down.svg);
   position: absolute;
-  top: 130%;
+  top: 120%;
+}
+@media (max-width: 991px) {
+  .hero__content::after {
+    top: 132%;
+  }
 }
 @media (max-width: 575px) {
   .hero__content::after {
@@ -715,8 +724,13 @@ body {
   }
 }
 .hero__media {
-  flex: 0 1 50%;
+  flex: 1 1 85%;
   position: relative;
+}
+.hero__media img {
+  position: relative;
+  width: 100%;
+  z-index: 2;
 }
 @media (max-width: 991px) {
   .hero__media {
@@ -740,7 +754,7 @@ body {
   width: 40vw;
   height: 85%;
   right: 0;
-  bottom: 20%;
+  bottom: 25%;
   transform: translateY(50%);
   border-radius: 35px 0 0 35px;
   background-image: linear-gradient(180deg, #7421b0, #d08eff);
@@ -759,12 +773,6 @@ body {
     bottom: 60%;
     width: 85vw;
   }
-}
-.hero__media-img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 2;
 }
 .hero__media-card {
   display: flex;

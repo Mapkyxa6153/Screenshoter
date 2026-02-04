@@ -21,8 +21,10 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 200px;
+    @media (max-width: vars.$breakpoint-hero-main-img) {
+      gap: 100px;
+    }
     @media (max-width: vars.$breakpoint-xxl) {
       gap: 60px;
     }
@@ -48,10 +50,10 @@
       // decorative arrow below CTA button
       content: url(/assets/decor/arrow-down.svg);
       position: absolute;
-      top: 130%; // moves the arrow down from the button
-      // @media (max-width: vars.$breakpoint-xxl) {
-      //   top: 120%;
-      // }
+      top: 120%; // moves the arrow down from the button
+      @media (max-width: vars.$breakpoint-xl) {
+        top: 132%;
+      }
       @media (max-width: vars.$breakpoint-l) {
         display: none;
       }
@@ -90,8 +92,13 @@
     }
   }
   &__media {
-    flex: 0 1 50%;
+    flex: 1 1 85%;
     position: relative;
+    & img {
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
     @media (max-width: vars.$breakpoint-xl) {
       flex: 0 1 60%;
     }
@@ -110,7 +117,7 @@
       width: 40vw;
       height: 85%;
       right: 0;
-      bottom: 20%;
+      bottom: 25%;
       transform: translateY(50%);
       border-radius: vars.$br-radius-xl 0 0 vars.$br-radius-xl;
       @include mixin.violet-gradient(180deg);
@@ -131,12 +138,6 @@
       }
     }
 
-    &-img {
-      position: relative;
-      width: 100%;
-      height: auto; // точно надо? это же значение по умолчанию для img
-      z-index: 2;
-    }
     &-card {
       // Glass card in hero
       @include mixin.flex-center;
