@@ -64,8 +64,10 @@ $br-radius-m: 10px; // regular cards
 $br-radius-s: 5px; // btns
 // ================================================
 // Approximate breakpoints
+$breakpoint-hero-high-resolution: 1800px;
 $breakpoint-introduction-margin: 1370px;
-$breakpoint-hero-main-img: 1250px;
+$breakpoint-introduction-cards: 1345px;
+$breakpoint-hero-img-gap: 1250px;
 $breakpoint-xxl: 1150px;
 $breakpoint-xl: 991px;
 $breakpoint-hero-btn: 625px;
