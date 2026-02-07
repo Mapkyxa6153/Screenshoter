@@ -84,6 +84,8 @@ document.addEventListener("keydown", (e) => {
 
 // Waves placement
 
+// Hero main img placement, move from border of the page
+
 // ++++++++++++
 
 // ширина текста в хиро секции

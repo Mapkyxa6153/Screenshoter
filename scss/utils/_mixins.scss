@@ -58,8 +58,6 @@
 
   @media (max-width: vars.$breakpoint-xl) {
     max-width: 900px;
-  }
-  @media (max-width: vars.$breakpoint-l) {
     padding: 0 20px;
   }
 }
@@ -75,10 +73,10 @@
   @media (max-width: vars.$breakpoint-introduction-cards) {
     grid-template-columns: repeat(2, 1fr);
   }
-  // @media (max-width: vars.$breakpoint-xxl) {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
-  @media (max-width: vars.$breakpoint-xl) {
+  @media (max-width: vars.$breakpoint-xxl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: vars.$breakpoint-section-list) {
     grid-template-columns: 1fr;
   }
 }
@@ -96,15 +94,22 @@
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
   @media (max-width: vars.$breakpoint-xl) {
+    max-width: 300px;
+  }
+
+  @media (max-width: vars.$breakpoint-xl) {
+    padding: 60px;
+  }
+  @media (max-width: vars.$breakpoint-section-list) {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: unset;
   }
   @include hover {
     background-color: vars.$accent-color;
     color: vars.$txt-tertiary-color;
-    transform: scale(1.05);
-    transform: translateY(-3px); // трансформы пишутся вместе, сейчас второй перезаписывает первый
+    transform: scale(1.05) translateY(-3px);
     box-shadow: 0 26px 48px -23px vars.$accent-color;
   }
 
@@ -132,6 +137,9 @@
   margin-bottom: 80px;
   @media (max-width: vars.$breakpoint-xxl) {
     gap: 50px;
+  }
+  @media (max-width: vars.$breakpoint-xl) {
+    gap: 30px;
   }
   @media (max-width: vars.$breakpoint-l) {
     flex-direction: column;
