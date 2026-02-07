@@ -169,9 +169,6 @@
   font-size: vars.$txt-xxl;
   color: vars.$txt-secondary-color;
   line-height: vars.$line-height-200;
-  &--black {
-    color: vars.$txt-primary-color;
-  }
 
   @media (max-width: vars.$breakpoint-xl) {
     font-size: vars.$txt-m;

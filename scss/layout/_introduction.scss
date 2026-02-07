@@ -26,6 +26,10 @@
     }
     &-txt {
       flex: 0 1 40%;
+      &--black {
+        font-weight: vars.$font-weight-medium;
+        color: vars.$txt-primary-color;
+      }
       @include mixin.section-txt;
       @media (max-width: vars.$breakpoint-xxl) {
         flex: 0 1 50%;
