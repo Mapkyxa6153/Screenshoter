@@ -61,8 +61,12 @@
       @include mixin.section-title;
     }
     &-txt {
+      @media (min-width: vars.$breakpoint-xxl) {
+        max-width: 460px;
+      }
       @media (max-width: vars.$breakpoint-xl) {
         flex: 0 1 65%;
+        max-width: 442px;
       }
       @include mixin.section-txt;
       &--wrapper {

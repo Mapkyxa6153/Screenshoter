@@ -217,10 +217,13 @@
 
 // Textual content wrapper
 @mixin gif-section-content {
-  flex: 0 1 50%;
+  // flex: 0 1 50%;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @media (max-width: vars.$breakpoint-xxl) {
+    flex: 0 1 50%;
+  }
   @media (max-width: vars.$breakpoint-xl) {
     flex-direction: row;
     justify-content: space-between;
@@ -229,10 +232,4 @@
     flex-direction: column;
     justify-content: space-between;
   }
-}
-
-@mixin gif-section-txt-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }

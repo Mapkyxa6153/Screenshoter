@@ -102,9 +102,8 @@
       max-width: 848px;
       z-index: 2;
 
-      @media (max-width: vars.$breakpoint-hero-high-resolution) {
-      }
-      @media (max-width: vars.$breakpoint-xxl) {
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 100%;
       }
     }
 

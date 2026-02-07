@@ -1,0 +1,47 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.one-click {
+  position: relative;
+  overflow-x: clip;
+  margin-bottom: 100px;
+  &__wrapper {
+    @include mixin.gif-section(row-reverse);
+  }
+  &__media {
+    &-wrapper {
+      @include mixin.gif-section-media;
+      position: relative;
+    }
+  }
+  &__content {
+    @include mixin.gif-section-content;
+    // align-items: center;
+
+    &-title {
+      //   align-self: flex-start;
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 0 35%;
+      }
+      @include mixin.section-title;
+    }
+    &-txt {
+      @media (min-width: vars.$breakpoint-xxl) {
+        max-width: 460px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 1 65%;
+        max-width: 442px;
+      }
+      @include mixin.section-txt;
+      &--wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      &--violet {
+        color: vars.$accent-color;
+      }
+    }
+  }
+}
