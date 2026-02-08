@@ -4,7 +4,8 @@
 .recording {
   position: relative;
   overflow-x: clip;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
+
   &__wrapper {
     @include mixin.gif-section(row);
   }

@@ -4,7 +4,32 @@
 .one-click {
   position: relative;
   overflow-x: clip;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
+  &__ellipse {
+    position: absolute;
+    z-index: -1;
+    width: 50vw;
+    max-width: 960px;
+    top: -170px;
+    right: 0;
+
+    @media (max-width: vars.$breakpoint-xl) {
+      top: -190px;
+      width: 95vw;
+    }
+  }
+  &__cube {
+    position: absolute;
+    width: 10vw;
+    z-index: -2;
+    top: -220px;
+    right: 450px;
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 122px;
+      right: 55%;
+      top: -150px;
+    }
+  }
   &__wrapper {
     @include mixin.gif-section(row-reverse);
   }
