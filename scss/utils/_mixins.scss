@@ -171,7 +171,7 @@
   line-height: vars.$line-height-200;
 
   @media (max-width: vars.$breakpoint-xl) {
-    font-size: vars.$txt-m;
+    font-size: vars.$txt-l;
   }
   @media (max-width: vars.$breakpoint-l) {
     text-align: center;
@@ -184,6 +184,9 @@
   align-items: center;
   gap: 150px;
   flex-direction: $direction;
+  @media (max-width: vars.$breakpoint-xxl) {
+    gap: 70px;
+  }
   @media (max-width: vars.$breakpoint-xl) {
     flex-direction: column;
     gap: 60px;

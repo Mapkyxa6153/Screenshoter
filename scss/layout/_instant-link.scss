@@ -1,0 +1,121 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.instant-link {
+  position: relative;
+  overflow-x: clip;
+  margin-bottom: 100px;
+  &__ellipse {
+    position: absolute;
+    z-index: -1;
+    width: 55vw;
+    top: -70px;
+    left: -100px;
+    @media (max-width: vars.$breakpoint-xl) {
+      top: -90px;
+      left: 0;
+      width: 95vw;
+    }
+  }
+  &__cube {
+    position: absolute;
+    width: 10vw;
+    z-index: -2;
+    top: -130px;
+    left: -65px;
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 122px;
+      left: 150px;
+      top: -150px;
+    }
+  }
+  &__media-card {
+    position: absolute;
+    width: 100%;
+    padding: 30px 40px;
+    color: vars.$txt-secondary-color;
+    line-height: vars.$line-height-170;
+    border-radius: vars.$br-radius-l;
+    max-width: 355px;
+    bottom: -25%;
+    left: 18%;
+    @include mixin.glass-effect;
+    @media (max-width: vars.$breakpoint-high-resolution) {
+      left: 15%;
+      bottom: -30%;
+    }
+    @media (max-width: vars.$breakpoint-instant-link-glass-card) {
+      left: 5%;
+      bottom: -35%;
+    }
+    @media (max-width: vars.$breakpoint-xxl) {
+      padding: 20px 30px;
+      left: 0;
+      bottom: -45%;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      padding: 20px 50px;
+      left: 23%;
+      bottom: -20%;
+    }
+    @media (max-width: vars.$breakpoint-instant-link-glass-card2) {
+      left: 15%;
+      bottom: -30%;
+    }
+    @media (max-width: vars.$breakpoint-section-list) {
+      left: 10%;
+      bottom: -30;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      left: 5%;
+      bottom: -30;
+      text-align: center;
+    }
+    &--black {
+      color: vars.$txt-primary-color;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      font-size: vars.$txt-l;
+    }
+  }
+  &__wrapper {
+    @include mixin.gif-section(row);
+    @media (max-width: vars.$breakpoint-xl) {
+      gap: 150px;
+    }
+  }
+  &__media {
+    &-wrapper {
+      @include mixin.gif-section-media;
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__content {
+    @include mixin.gif-section-content;
+
+    &-title {
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 0 35%;
+      }
+      @include mixin.section-title;
+    }
+    &-txt {
+      @media (min-width: vars.$breakpoint-xxl) {
+        max-width: 460px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 1 65%;
+        max-width: 442px;
+      }
+      @include mixin.section-txt;
+      &--wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      &--violet {
+        color: vars.$accent-color;
+      }
+    }
+  }
+}
