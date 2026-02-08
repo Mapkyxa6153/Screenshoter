@@ -65,11 +65,11 @@
     }
     @media (max-width: vars.$breakpoint-section-list) {
       left: 10%;
-      bottom: -30;
+      bottom: -30; // так не работает, нужно указать единицы измерения
     }
     @media (max-width: vars.$breakpoint-l) {
       left: 5%;
-      bottom: -30;
+      bottom: -30; // так не работает, нужно указать единицы измерения
       text-align: center;
     }
     &--black {
