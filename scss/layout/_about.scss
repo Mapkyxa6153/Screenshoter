@@ -1,0 +1,30 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.about {
+  margin-bottom: 250px;
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 150px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 60px;
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__cards {
+    @include mixin.section-list;
+    margin-bottom: 90px;
+    @media (max-width: vars.$breakpoint-xl) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      margin-bottom: 30px;
+    }
+    &-item {
+      @include mixin.list-item;
+      min-width: 170px;
+    }
+  }
+}

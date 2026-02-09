@@ -59,7 +59,18 @@
   color: vars.$txt-tertiary-color;
   background-color: vars.$element-black-color;
   border-radius: vars.$br-radius-s;
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  @include mixin.hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 20px rgba(vars.$element-black-color, 0.4),
+      0 15px 40px rgba(vars.$element-black-color, 0.2);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
   @media (max-width: vars.$breakpoint-xl) {
     font-size: vars.$txt-m;
   }
@@ -67,7 +78,9 @@
 
 .btn-violet {
   @include mixin.violet-gradient(90deg);
-  transition: 0.5s;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   z-index: 2;
