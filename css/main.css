@@ -1695,4 +1695,46 @@ body {
   .about__cards-item span {
     font-size: 18px;
   }
+}
+
+.features__title {
+  font-size: 36px;
+}
+.features__icon {
+  width: 111px;
+}
+.features__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.features__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.features__item-title {
+  font-size: 24px;
+}
+.features__item-title-number {
+  font-size: 36px;
+  color: #7421b0;
+  font-weight: 700;
+}
+.features__item-title-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.features__item-txt {
+  margin: 0;
+  color: #828282;
+  font-size: 18px;
+  line-height: 200%;
+}
+@media (max-width: 991px) {
+  .features__item-txt {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */

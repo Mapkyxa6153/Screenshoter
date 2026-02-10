@@ -1,0 +1,46 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.features {
+  &__title {
+    font-size: vars.$title-xl;
+  }
+  &__icon {
+    width: 111px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+  &__item {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    &-title {
+      font-size: vars.$title-l;
+      &-number {
+        font-size: vars.$title-xl;
+        color: vars.$accent-color;
+        font-weight: vars.$font-weight-bold;
+      }
+      &-wrapper {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+    }
+    &-txt {
+      margin: 0;
+      color: vars.$txt-secondary-color;
+      font-size: vars.$title-s;
+      line-height: vars.$line-height-200;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-l;
+      }
+    }
+  }
+}
