@@ -93,17 +93,11 @@
     background-color 0.5s ease-in-out,
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
-  @media (max-width: vars.$breakpoint-xl) {
-    max-width: 300px; // вот этот и следующий запрос, не понимаю зачем
-  }
 
-  @media (max-width: vars.$breakpoint-xl) {
-    padding: 60px;
-  }
   @media (max-width: vars.$breakpoint-section-list) {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    gap: 60px;
     max-width: unset;
   }
   @include hover {

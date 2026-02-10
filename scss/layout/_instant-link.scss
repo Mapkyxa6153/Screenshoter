@@ -55,6 +55,7 @@
       bottom: -45%;
     }
     @media (max-width: vars.$breakpoint-xl) {
+      max-width: 330px;
       padding: 20px 50px;
       left: 23%;
       bottom: -20%;
@@ -65,12 +66,15 @@
     }
     @media (max-width: vars.$breakpoint-section-list) {
       left: 10%;
-      bottom: -30; // так не работает, нужно указать единицы измерения
     }
     @media (max-width: vars.$breakpoint-l) {
       left: 5%;
-      bottom: -30; // так не работает, нужно указать единицы измерения
       text-align: center;
+    }
+    @media (max-width: vars.$breakpoint-instant-link-glass-card) {
+      left: -2%;
+      bottom: -35%;
+      max-width: 310px;
     }
     &--black {
       color: vars.$txt-primary-color;
