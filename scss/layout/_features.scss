@@ -2,6 +2,15 @@
 @use "../utils/mixins" as mixin;
 
 .features {
+  position: relative;
+
+  &__wrapper {
+    @include mixin.glass-effect;
+    border-radius: vars.$br-radius-xxl;
+    border: 1px solid red;
+    padding: 0 200px;
+    margin: 0 -200px;
+  }
   &__title {
     font-size: vars.$title-xl;
     margin-bottom: 100px;
@@ -35,6 +44,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
+    padding: 0;
     justify-content: space-between;
     gap: 80px;
     @media (max-width: vars.$breakpoint-xl) {
@@ -107,5 +117,20 @@
         font-size: vars.$txt-l;
       }
     }
+  }
+  &__cylinder {
+    &--right {
+      position: absolute;
+      right: 0;
+      bottom: -30%;
+    }
+    &--left {
+      position: absolute;
+    }
+  }
+  &__purple-sphere {
+    position: absolute;
+    left: 70%;
+    top: -15%;
   }
 }

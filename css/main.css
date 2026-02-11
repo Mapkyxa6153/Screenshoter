@@ -1697,6 +1697,19 @@ body {
   }
 }
 
+.features {
+  position: relative;
+}
+.features__wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 70px;
+  border: 1px solid red;
+  padding: 0 200px;
+  margin: 0 -200px;
+}
 .features__title {
   font-size: 36px;
   margin-bottom: 100px;
@@ -1738,6 +1751,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
+  padding: 0;
   justify-content: space-between;
   gap: 80px;
 }
@@ -1827,4 +1841,17 @@ body {
   .features__item-txt {
     font-size: 14px;
   }
+}
+.features__cylinder--right {
+  position: absolute;
+  right: 0;
+  bottom: -30%;
+}
+.features__cylinder--left {
+  position: absolute;
+}
+.features__purple-sphere {
+  position: absolute;
+  left: 70%;
+  top: -15%;
 }/*# sourceMappingURL=main.css.map */
