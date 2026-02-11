@@ -4,33 +4,90 @@
 .features {
   &__title {
     font-size: vars.$title-xl;
+    margin-bottom: 100px;
+    @media (max-width: vars.$breakpoint-xl) {
+      font-size: vars.$title-m;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &-container {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+    }
+    &--violet {
+      color: vars.$accent-color;
+    }
   }
   &__icon {
     width: 111px;
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 90px;
+      align-self: flex-start;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      align-self: center;
+    }
   }
   &__list {
     list-style: none;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 80px;
+    @media (max-width: vars.$breakpoint-xl) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
-    &-wrapper {
+    &-content-wrapper {
       display: flex;
       flex-direction: column;
       gap: 60px;
+      @media (max-width: vars.$breakpoint-xl) {
+        gap: 30px;
+      }
     }
-    &-title {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 410px;
+      gap: 60px;
+      @media (max-width: vars.$breakpoint-xl) {
+        flex-direction: row;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        flex-direction: column;
+      }
+    }
+    &-subtitle {
       font-size: vars.$title-l;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-s;
+      }
+
       &-number {
         font-size: vars.$title-xl;
         color: vars.$accent-color;
         font-weight: vars.$font-weight-bold;
+        @media (max-width: vars.$breakpoint-xl) {
+          font-size: vars.$title-m;
+        }
       }
       &-wrapper {
         display: flex;
         gap: 50px;
         align-items: center;
+        @media (max-width: vars.$breakpoint-xl) {
+          align-items: flex-start;
+          gap: 30px;
+        }
+        @media (max-width: vars.$breakpoint-l) {
+          justify-content: center;
+        }
       }
     }
     &-txt {
@@ -38,6 +95,14 @@
       color: vars.$txt-secondary-color;
       font-size: vars.$title-s;
       line-height: vars.$line-height-200;
+      @media (max-width: vars.$breakpoint-l) {
+        text-align: center;
+      }
+      &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$txt-l;
       }
