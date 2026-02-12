@@ -123,14 +123,36 @@
       position: absolute;
       right: 0;
       bottom: -30%;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 154px;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        width: 61px;
+      }
     }
     &--left {
       position: absolute;
+      width: 164px;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 105px;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        width: 41px;
+      }
     }
   }
   &__purple-sphere {
     position: absolute;
     left: 70%;
     top: -15%;
+    width: 243px;
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 150px;
+      top: -3%;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      width: 75px;
+      top: -3%;
+    }
   }
 }

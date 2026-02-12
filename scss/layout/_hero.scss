@@ -173,20 +173,34 @@
     }
     &-wave {
       position: absolute;
-      left: 50%;
-      transform: translateX(-20%);
-      bottom: 0;
-      width: 200%;
-      min-width: 1920px;
+      left: -5%;
+      bottom: -40%;
+
+      @media (max-width: vars.$hero-wave-xxl) {
+        bottom: -25%;
+        left: 0;
+      }
       @media (max-width: vars.$breakpoint-xxl) {
-        bottom: -60%;
+        bottom: -15%;
       }
       @media (max-width: vars.$breakpoint-xl) {
-        bottom: -105%;
+        bottom: -40%;
+      }
+      @media (max-width: vars.$hero-wave-xl) {
+        bottom: -25%;
+      }
+      @media (max-width: vars.$hero-wave-l) {
+        bottom: -10%;
       }
       @media (max-width: vars.$breakpoint-l) {
-        bottom: -80%;
-        transform: translateX(-80%);
+        bottom: 25%;
+        left: -80%;
+      }
+      & img {
+        width: 100vw;
+        @media (max-width: vars.$breakpoint-l) {
+          width: 200vw;
+        }
       }
     }
   }
