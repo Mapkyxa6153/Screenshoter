@@ -5,7 +5,27 @@
   position: relative;
   overflow-x: clip;
   margin-bottom: 250px;
-
+  &__wave {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    z-index: -3;
+    @media (max-width: vars.$breakpoint-high-resolution) {
+      bottom: 45%;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      bottom: 70%;
+    }
+    @media (max-width: vars.$hero-wave-xl) {
+      bottom: 75%;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      bottom: 80%;
+    }
+    & img {
+      width: 100vw;
+    }
+  }
   &__wrapper {
     @include mixin.gif-section(row);
   }
@@ -40,27 +60,6 @@
         height: 35%;
         top: 10%;
         border-radius: vars.$br-radius-xl;
-      }
-    }
-    &-wave {
-      position: absolute;
-      right: 0;
-      bottom: 25%;
-      z-index: -3;
-      @media (max-width: vars.$breakpoint-high-resolution) {
-        bottom: 45%;
-      }
-      @media (max-width: vars.$breakpoint-xl) {
-        bottom: 70%;
-      }
-      @media (max-width: vars.$hero-wave-xl) {
-        bottom: 75%;
-      }
-      @media (max-width: vars.$breakpoint-l) {
-        bottom: 80%;
-      }
-      & img {
-        width: 100vw;
       }
     }
   }

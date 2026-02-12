@@ -5,6 +5,29 @@
   position: relative;
   overflow-x: clip;
   margin-bottom: 250px;
+  &__wave {
+    position: absolute;
+    right: 0;
+    bottom: -60%;
+    z-index: -3;
+    @media (max-width: vars.$breakpoint-xxl) {
+      bottom: -80%;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      bottom: -30%;
+    }
+    @media (max-width: vars.$hero-wave-xl) {
+      bottom: -35%;
+      left: 0;
+    }
+
+    & img {
+      width: 100vw;
+      @media (max-width: vars.$hero-wave-l) {
+        width: 150vw;
+      }
+    }
+  }
   &__glass {
     position: absolute;
     right: 0;
