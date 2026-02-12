@@ -1,0 +1,87 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.editor {
+  position: relative;
+  overflow-x: clip;
+  margin-bottom: 250px;
+  &__glass {
+    position: absolute;
+    right: 0;
+    top: -20%;
+    width: 45vw;
+    height: 140%;
+    z-index: -1;
+    border-radius: vars.$br-radius-xl 0 0 vars.$br-radius-xl;
+    background: linear-gradient(90deg, rgba(vars.$accent-color, 0.2) 0%, rgba(rgba(vars.$accent-color, 0.1), 0.2) 100%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 60vw;
+      top: -10%;
+      height: 80%;
+    }
+    @media (max-width: vars.$breakpoint-editor-glass) {
+      width: 60vw;
+      top: -12%;
+      height: 75%;
+    }
+    @media (max-width: vars.$breakpoint-editor-glass2) {
+      width: 60vw;
+      top: -12%;
+      height: 67%;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      width: 60vw;
+      border-radius: vars.$br-radius-xl;
+    }
+  }
+  &__donut {
+    position: absolute;
+    width: 193px;
+    z-index: -2;
+    left: 65%;
+    top: -45%;
+    @media (max-width: vars.$breakpoint-xl) {
+      width: 122px;
+      top: -120px;
+    }
+  }
+  &__wrapper {
+    @include mixin.gif-section(row-reverse);
+  }
+  &__media {
+    &-wrapper {
+      @include mixin.gif-section-media;
+      position: relative;
+    }
+  }
+  &__content {
+    @include mixin.gif-section-content;
+
+    &-title {
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 0 35%;
+      }
+      @include mixin.section-title;
+    }
+    &-txt {
+      @media (min-width: vars.$breakpoint-xxl) {
+        max-width: 460px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 1 65%;
+        max-width: 442px;
+      }
+      @include mixin.section-txt;
+      &--wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      &--violet {
+        color: vars.$accent-color;
+      }
+    }
+  }
+}
