@@ -1143,17 +1143,32 @@ body {
 }
 .recording__media-wave {
   position: absolute;
-  left: 50%;
-  top: -100%;
-  width: 300%;
-  transform: translateX(-40%);
-  min-width: 1920px;
+  right: 0;
+  bottom: 25%;
   z-index: -3;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1600px) {
   .recording__media-wave {
-    top: -170%;
+    bottom: 45%;
   }
+}
+@media (max-width: 991px) {
+  .recording__media-wave {
+    bottom: 70%;
+  }
+}
+@media (max-width: 750px) {
+  .recording__media-wave {
+    bottom: 75%;
+  }
+}
+@media (max-width: 575px) {
+  .recording__media-wave {
+    bottom: 80%;
+  }
+}
+.recording__media-wave img {
+  width: 100vw;
 }
 .recording__element-ring {
   position: relative;
