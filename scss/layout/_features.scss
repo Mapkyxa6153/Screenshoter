@@ -6,7 +6,7 @@
 
   &__wrapper {
     @include mixin.glass-effect;
-    border-radius: vars.$br-radius-xxl;
+    border-radius: vars.$br-radius-xxl vars.$br-radius-xxl 0 0;
     border: 1px solid red;
     padding: 0 200px;
     margin: 0 -200px;

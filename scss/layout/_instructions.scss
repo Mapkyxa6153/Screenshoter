@@ -1,0 +1,109 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.instructions {
+  position: relative;
+  &__wave {
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    z-index: -1;
+    @media (max-width: vars.$breakpoint-xxl) {
+      bottom: -80%;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      bottom: -30%;
+    }
+    @media (max-width: vars.$hero-wave-xl) {
+      bottom: -35%;
+      left: 0;
+    }
+
+    & img {
+      width: 100vw;
+      @media (max-width: vars.$hero-wave-l) {
+        width: 150vw;
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+    z-index: -2;
+    @include mixin.glass-effect;
+    border-radius: 0 0 vars.$br-radius-xxl vars.$br-radius-xxl;
+    border: 1px solid red;
+    padding: 0 200px;
+    margin: 0 -200px;
+  }
+  &__title {
+    font-size: vars.$title-xl;
+    margin-bottom: 100px;
+    @media (max-width: vars.$breakpoint-xl) {
+      font-size: vars.$title-m;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &-container {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+    }
+    &--violet {
+      color: vars.$accent-color;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+    gap: 80px;
+    @media (max-width: vars.$breakpoint-xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__item {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 410px;
+      gap: 60px;
+      @media (max-width: vars.$breakpoint-xl) {
+        flex-direction: row;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        flex-direction: column;
+      }
+    }
+    &-subtitle {
+      font-size: vars.$title-xl;
+      color: vars.$accent-color;
+      font-weight: vars.$font-weight-bold;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-m;
+      }
+    }
+    &-txt {
+      color: vars.$txt-secondary-color;
+      font-size: vars.$txt-xxl;
+      line-height: vars.$line-height-180;
+      &--violet {
+        color: vars.$accent-color;
+      }
+    }
+  }
+  &__btn {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 460px;
+      height: 200px;
+      border: 5px solid orange;
+    }
+  }
+}
