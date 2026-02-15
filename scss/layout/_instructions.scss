@@ -30,9 +30,8 @@
     position: relative;
     @include mixin.glass-effect;
     border-radius: 0 0 vars.$br-radius-xxl vars.$br-radius-xxl;
-    border: 1px solid red;
-    padding: 0 200px;
-    margin: 0 -200px;
+    max-width: 90vw;
+    margin: 0 auto;
   }
   &__title {
     position: relative;
@@ -59,24 +58,25 @@
     position: relative;
     z-index: 2;
     list-style: none;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(-webkit-max-content, 1fr));
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
     padding: 0;
-    justify-content: space-between;
-    gap: 80px;
+    justify-content: space-evenly;
     margin-bottom: 60px;
-    @media (max-width: vars.$breakpoint-xl) {
-      flex-direction: column;
+    gap: 35px;
+    @media (max-width: vars.$breakpoint-xxl) {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin: 0 auto;
     }
   }
   &__item {
+    display: flex;
     &-wrapper {
       display: flex;
       flex-direction: column;
-      @media (max-width: vars.$breakpoint-xl) {
-        flex-direction: column;
-        max-width: 442px;
-      }
+      flex: 1;
       @media (max-width: vars.$breakpoint-l) {
         align-items: center;
       }
@@ -87,42 +87,48 @@
       font-weight: vars.$font-weight-bold;
       margin-bottom: 60px;
       @media (max-width: vars.$breakpoint-xl) {
-        font-size: vars.$title-m;
+        font-size: vars.$title-s;
       }
     }
     &-txt {
       color: vars.$txt-secondary-color;
       font-size: vars.$txt-xxl;
       line-height: vars.$line-height-180;
+      @media (max-width: vars.$breakpoint-instructions-cards) {
+        max-width: 250px;
+      }
+      @media (max-width: vars.$breakpoint-xxl) {
+        max-width: none;
+      }
       &--violet {
         color: vars.$accent-color;
       }
-      &-wrapper {
-        display: flex;
-        flex-direction: column;
-        @media (max-width: vars.$breakpoint-xxl) {
-          flex-direction: row;
-          gap: 5px;
+      @media (max-width: vars.$breakpoint-xxl) {
+        & br {
+          display: none;
         }
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-l;
+      }
+      @media (max-width: vars.$breakpoint-m) {
+        font-size: vars.$txt-m;
       }
     }
   }
 
+  &__card {
+    display: flex;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    @media (max-width: vars.$breakpoint-instructions-cards) {
+    }
+  }
   &__btn {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
-    @media (max-width: vars.$breakpoint-l) {
-      margin-bottom: 30px;
-    }
-    &-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 460px;
-      height: 200px;
-      border: 5px solid orange;
-      background-color: wheat;
-    }
+    align-items: center;
   }
 }
