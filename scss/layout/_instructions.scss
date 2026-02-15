@@ -28,16 +28,20 @@
   // }
   &__wrapper {
     position: relative;
-    @include mixin.glass-effect;
+    background: linear-gradient(90deg, rgba(171, 253, 191, 0.1) 0%, rgba(236, 141, 255, 0.1) 100%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-radius: 0 0 vars.$br-radius-xxl vars.$br-radius-xxl;
     max-width: 90vw;
     margin: 0 auto;
+    padding-bottom: 60px;
   }
   &__title {
     position: relative;
     z-index: 2;
     font-size: vars.$title-xl;
-    margin-bottom: 100px;
+
+    margin: 0;
     @media (max-width: vars.$breakpoint-xl) {
       font-size: vars.$title-m;
     }

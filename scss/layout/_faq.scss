@@ -1,0 +1,67 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.faq {
+  position: relative;
+  background: linear-gradient(90deg, rgba(179, 63, 173, 0.1) 0%, rgba(211, 202, 71, 0.1) 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  &__cone {
+    position: absolute;
+    bottom: 65%;
+    left: 12%;
+    width: 216px;
+  }
+  &__sphere {
+    position: absolute;
+    &--big {
+      bottom: 10%;
+      right: 10%;
+    }
+    &--small {
+      bottom: 25%;
+      right: 8%;
+    }
+  }
+  &__title {
+    font-size: vars.$title-xxl;
+    font-weight: vars.$font-weight-bold;
+    text-align: center;
+  }
+  &__list {
+    list-style: none;
+    display: grid;
+    gap: 40px;
+    &-item {
+      @include mixin.glass-effect;
+      border-radius: vars.$br-radius-l;
+      flex: 1 1 0;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 140px;
+    padding: 50px;
+
+    &-question {
+      color: vars.$txt-primary-color;
+      font-weight: vars.$font-weight-medium;
+    }
+    &-answer {
+      color: vars.$txt-secondary-color;
+    }
+    &-number {
+      color: vars.$accent-color;
+      font-size: vars.$title-xl;
+      font-weight: vars.$font-weight-bold;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
