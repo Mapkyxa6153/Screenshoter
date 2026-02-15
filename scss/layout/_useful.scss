@@ -1,0 +1,66 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mixin;
+
+.useful {
+  margin: 250px 0;
+  border: 1px solid red;
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 150px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 60px;
+  }
+  &__glass-card {
+    position: relative;
+    padding: 10px 24px;
+    @include mixin.flex-center;
+    display: inline-block;
+    margin-bottom: 23px;
+    @include mixin.glass-effect;
+    color: vars.$txt-secondary-color;
+    font-size: vars.$txt-xl;
+    line-height: vars.$line-height-160;
+    & img {
+      position: absolute;
+      z-index: -1;
+      top: -10%;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 53px;
+      }
+    }
+  }
+  &__content {
+    @include mixin.section-content;
+
+    &-title {
+      flex: 0 1 50%;
+      @include mixin.section-title;
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+        min-width: 464px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        flex: 0 0 50%;
+        min-width: 258px;
+      }
+    }
+    &-txt {
+      flex: 0 1 40%;
+      &--black {
+        font-weight: vars.$font-weight-medium;
+        color: vars.$txt-primary-color;
+      }
+      @include mixin.section-txt;
+      @media (max-width: vars.$breakpoint-xxl) {
+        flex: 0 1 50%;
+      }
+    }
+  }
+  &__cards {
+    @include mixin.section-list;
+    &-item {
+      @include mixin.list-item;
+      min-width: 170px;
+    }
+  }
+}
