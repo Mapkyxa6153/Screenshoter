@@ -2610,4 +2610,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.join {
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
