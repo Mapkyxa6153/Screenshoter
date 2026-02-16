@@ -2181,17 +2181,22 @@ body {
   position: relative;
   z-index: 2;
   font-size: 36px;
-  margin: 0;
+  margin: 0 0 100px 0;
 }
 @media (max-width: 991px) {
   .instructions__title {
     font-size: 20px;
   }
 }
+@media (max-width: 991px) {
+  .instructions__title {
+    margin: 0 0 60px 0;
+  }
+}
 @media (max-width: 575px) {
   .instructions__title {
-    margin-bottom: 30px;
     text-align: center;
+    margin: 0 0 30px 0;
   }
 }
 .instructions__title-container {
@@ -2202,6 +2207,11 @@ body {
 .instructions__title--violet {
   color: #7421b0;
 }
+@media (max-width: 991px) {
+  .instructions__title {
+    align-self: center;
+  }
+}
 .instructions__list {
   position: relative;
   z-index: 2;
@@ -2209,8 +2219,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
   padding: 0;
-  justify-content: space-evenly;
-  margin-bottom: 60px;
   gap: 35px;
 }
 @media (max-width: 1150px) {
@@ -2230,7 +2238,7 @@ body {
 }
 @media (max-width: 575px) {
   .instructions__item-wrapper {
-    align-items: center;
+    text-align: center;
   }
 }
 .instructions__item-subtitle {
@@ -2242,6 +2250,12 @@ body {
 @media (max-width: 991px) {
   .instructions__item-subtitle {
     font-size: 18px;
+    margin-bottom: 37px;
+  }
+}
+@media (max-width: 575px) {
+  .instructions__item-subtitle {
+    margin-bottom: 30px;
   }
 }
 .instructions__item-txt {
@@ -2283,11 +2297,28 @@ body {
   align-items: center;
   justify-content: center;
   border: 2px solid red;
+  margin-bottom: 40px;
+}
+@media (max-width: 991px) {
+  .instructions__card {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .instructions__card {
+    margin-bottom: 20px;
+  }
 }
 .instructions__btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
+}
+@media (max-width: 575px) {
+  .instructions__btn {
+    margin-top: 30px;
+  }
 }
 
 .useful {
@@ -2481,12 +2512,29 @@ body {
   position: relative;
   background: linear-gradient(90deg, rgba(179, 63, 173, 0.1) 0%, rgba(211, 202, 71, 0.1) 100%);
   backdrop-filter: blur(10px);
+  padding: 100px 0 170px 0;
+}
+@media (max-width: 991px) {
+  .faq {
+    padding: 60px 0 60px 0;
+  }
 }
 .faq__cone {
   position: absolute;
   bottom: 65%;
   left: 12%;
   width: 216px;
+}
+@media (max-width: 991px) {
+  .faq__cone {
+    width: 118px;
+  }
+}
+@media (max-width: 575px) {
+  .faq__cone {
+    width: 167px;
+    left: -20%;
+  }
 }
 .faq__sphere {
   position: absolute;
@@ -2495,9 +2543,19 @@ body {
   bottom: 10%;
   right: 10%;
 }
+@media (max-width: 575px) {
+  .faq__sphere--big {
+    width: 106px;
+  }
+}
 .faq__sphere--small {
   bottom: 25%;
   right: 8%;
+}
+@media (max-width: 575px) {
+  .faq__sphere--small {
+    width: 48px;
+  }
 }
 .faq__title {
   font-size: 48px;
@@ -2508,6 +2566,7 @@ body {
   list-style: none;
   display: grid;
   gap: 40px;
+  padding: 0;
 }
 .faq__list-item {
   background: rgba(255, 255, 255, 0.05);
@@ -2522,6 +2581,18 @@ body {
   align-items: baseline;
   gap: 140px;
   padding: 50px;
+}
+@media (max-width: 991px) {
+  .faq__card {
+    gap: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .faq__card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+  }
 }
 .faq__card-question {
   color: #131313;

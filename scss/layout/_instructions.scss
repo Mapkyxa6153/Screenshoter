@@ -3,29 +3,7 @@
 
 .instructions {
   position: relative;
-  // &__wave {
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 30%;
-  //   z-index: 1;
-  //   @media (max-width: vars.$breakpoint-xxl) {
-  //     bottom: -80%;
-  //   }
-  //   @media (max-width: vars.$breakpoint-xl) {
-  //     bottom: -30%;
-  //   }
-  //   @media (max-width: vars.$hero-wave-xl) {
-  //     bottom: -35%;
-  //     left: 0;
-  //   }
 
-  //   & img {
-  //     width: 100vw;
-  //     @media (max-width: vars.$hero-wave-l) {
-  //       width: 150vw;
-  //     }
-  //   }
-  // }
   &__wrapper {
     position: relative;
     background: linear-gradient(90deg, rgba(171, 253, 191, 0.1) 0%, rgba(236, 141, 255, 0.1) 100%);
@@ -40,14 +18,16 @@
     position: relative;
     z-index: 2;
     font-size: vars.$title-xl;
-
-    margin: 0;
+    margin: 0 0 100px 0;
     @media (max-width: vars.$breakpoint-xl) {
       font-size: vars.$title-m;
     }
+    @media (max-width: vars.$breakpoint-xl) {
+      margin: 0 0 60px 0;
+    }
     @media (max-width: vars.$breakpoint-l) {
-      margin-bottom: 30px;
       text-align: center;
+      margin: 0 0 30px 0;
     }
     &-container {
       display: flex;
@@ -56,6 +36,9 @@
     }
     &--violet {
       color: vars.$accent-color;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      align-self: center;
     }
   }
   &__list {
@@ -66,8 +49,6 @@
     grid-template-columns: repeat(3, minmax(-webkit-max-content, 1fr));
     grid-template-columns: repeat(3, minmax(max-content, 1fr));
     padding: 0;
-    justify-content: space-evenly;
-    margin-bottom: 60px;
     gap: 35px;
     @media (max-width: vars.$breakpoint-xxl) {
       grid-template-columns: 1fr;
@@ -82,7 +63,8 @@
       flex-direction: column;
       flex: 1;
       @media (max-width: vars.$breakpoint-l) {
-        align-items: center;
+        // align-items: center;
+        text-align: center;
       }
     }
     &-subtitle {
@@ -92,6 +74,10 @@
       margin-bottom: 60px;
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$title-s;
+        margin-bottom: 37px;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        margin-bottom: 30px;
       }
     }
     &-txt {
@@ -127,12 +113,21 @@
     align-items: center;
     justify-content: center;
     border: 2px solid red;
-    @media (max-width: vars.$breakpoint-instructions-cards) {
+    margin-bottom: 40px;
+    @media (max-width: vars.$breakpoint-xl) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      margin-bottom: 20px;
     }
   }
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
+    @media (max-width: vars.$breakpoint-l) {
+      margin-top: 30px;
+    }
   }
 }

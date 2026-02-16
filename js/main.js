@@ -64,8 +64,6 @@ document.addEventListener("keydown", (e) => {
   if (menu.classList.contains("navbar__menu--active")) toggleMenu();
 });
 
-// "Делайте снимки и записывайте экран" - на макете вес больше, проверь
-// Поставил 900, но как и на макете было 700
 
 // Моб меню цвет текста надо поменять ⚠️
 // Поствил пока белый цвет, но тоже как будто такое себе
@@ -74,10 +72,21 @@ document.addEventListener("keydown", (e) => {
 
 // Waves placement ⚠️
 
-// Hero img size + placement ⚠️
-
 // ++++++++++++
 
 // брур под гифкой слишком теплых тонов ⚠️
 
 // about -> иконки и текст на мобилке. Перепроверить похожую секцию
+
+
+// Hero img position
+
+// sections sizes, margins, paddings decorative elements (all added?)
+
+// Instructions section (cards)
+
+// useful section glass card above title
+
+// faq - js + btn
+
+// Instructions missing wave
