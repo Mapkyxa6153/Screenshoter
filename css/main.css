@@ -2624,7 +2624,6 @@ body {
   .join__wrapper {
     padding: 100px 0;
     grid-template-columns: 1fr;
-    position: static;
   }
 }
 @media (max-width: 575px) {
@@ -2738,5 +2737,60 @@ body {
 @media (max-width: 575px) {
   .join__btn {
     margin: 0 auto;
+  }
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 60px 0;
+}
+.footer__wrapper {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+.footer__navigation-list {
+  display: flex;
+  gap: 200px;
+  list-style: none;
+  margin-left: auto;
+}
+@media (max-width: 991px) {
+  .footer__navigation-list {
+    justify-content: space-evenly;
+  }
+}
+.footer__navigation-item {
+  color: #131313;
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 500;
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  .footer__navigation-item {
+    font-size: 18px;
+  }
+}
+.footer__product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+.footer__product-item {
+  text-decoration: none;
+  color: #828282;
+  font-size: 18px;
+  line-height: 200%;
+}
+@media (max-width: 991px) {
+  .footer__product-item {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */

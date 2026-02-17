@@ -10,7 +10,6 @@
     @media (max-width: vars.$breakpoint-xl) {
       padding: 100px 0;
       grid-template-columns: 1fr;
-      position: static;
     }
     @media (max-width: vars.$breakpoint-l) {
       padding: 60px 0;
