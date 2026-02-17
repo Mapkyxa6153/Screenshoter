@@ -90,3 +90,5 @@ document.addEventListener("keydown", (e) => {
 // faq - js + btn
 
 // Instructions missing wave
+
+// RECHECK BUTTONS (remove spans, divs for btns)

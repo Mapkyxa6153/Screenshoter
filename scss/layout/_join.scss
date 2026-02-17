@@ -3,4 +3,106 @@
 
 .join {
   position: relative;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 200px 0;
+    @media (max-width: vars.$breakpoint-xl) {
+      padding: 100px 0;
+      grid-template-columns: 1fr;
+      position: static;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      padding: 60px 0;
+      gap: 60px;
+    }
+  }
+  &__content {
+    @include mixin.flex-column;
+    gap: 60px;
+    & a {
+      align-self: flex-start;
+    }
+    p {
+      font-size: vars.$title-xl;
+      color: vars.$txt-primary-color;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-l;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        font-size: vars.$title-s;
+        text-align: center;
+      }
+    }
+  }
+  &__media {
+    &-diskette {
+      position: absolute;
+      left: 30%;
+      top: 60%;
+      width: 144px;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 122px;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        width: 114px;
+      }
+    }
+    &-cone {
+      position: absolute;
+      left: 25%;
+      top: 33%;
+      width: 130px;
+      z-index: -2;
+    }
+    &-glass {
+      position: absolute;
+      left: 0;
+      top: 43%;
+      width: 40vw;
+      height: 30%;
+      z-index: -1;
+      border-radius: 0 vars.$br-radius-m vars.$br-radius-m 0;
+      background: linear-gradient(90deg, rgba(179, 63, 173, 0.1) 0%, rgba(211, 202, 71, 0.1) 100%);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      @media (max-width: vars.$breakpoint-xxl) {
+        width: 45vw;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 70vw;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        width: 100vw;
+      }
+    }
+  }
+  &__wave {
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+    z-index: -3;
+    @media (max-width: vars.$breakpoint-xxl) {
+      bottom: -80%;
+    }
+    @media (max-width: vars.$breakpoint-xl) {
+      bottom: -30%;
+    }
+    @media (max-width: vars.$hero-wave-xl) {
+      bottom: -35%;
+      left: 0;
+    }
+
+    & img {
+      width: 100vw;
+      @media (max-width: vars.$hero-wave-l) {
+        width: 150vw;
+      }
+    }
+  }
+  &__btn {
+    @media (max-width: vars.$breakpoint-l) {
+      margin: 0 auto;
+    }
+  }
 }

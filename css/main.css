@@ -2614,4 +2614,129 @@ body {
 
 .join {
   position: relative;
+}
+.join__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 200px 0;
+}
+@media (max-width: 991px) {
+  .join__wrapper {
+    padding: 100px 0;
+    grid-template-columns: 1fr;
+    position: static;
+  }
+}
+@media (max-width: 575px) {
+  .join__wrapper {
+    padding: 60px 0;
+    gap: 60px;
+  }
+}
+.join__content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.join__content a {
+  align-self: flex-start;
+}
+.join__content p {
+  font-size: 36px;
+  color: #131313;
+}
+@media (max-width: 991px) {
+  .join__content p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .join__content p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.join__media-diskette {
+  position: absolute;
+  left: 30%;
+  top: 60%;
+  width: 144px;
+}
+@media (max-width: 991px) {
+  .join__media-diskette {
+    width: 122px;
+  }
+}
+@media (max-width: 575px) {
+  .join__media-diskette {
+    width: 114px;
+  }
+}
+.join__media-cone {
+  position: absolute;
+  left: 25%;
+  top: 33%;
+  width: 130px;
+  z-index: -2;
+}
+.join__media-glass {
+  position: absolute;
+  left: 0;
+  top: 43%;
+  width: 40vw;
+  height: 30%;
+  z-index: -1;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(90deg, rgba(179, 63, 173, 0.1) 0%, rgba(211, 202, 71, 0.1) 100%);
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 1150px) {
+  .join__media-glass {
+    width: 45vw;
+  }
+}
+@media (max-width: 991px) {
+  .join__media-glass {
+    width: 70vw;
+  }
+}
+@media (max-width: 575px) {
+  .join__media-glass {
+    width: 100vw;
+  }
+}
+.join__wave {
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+  z-index: -3;
+}
+@media (max-width: 1150px) {
+  .join__wave {
+    bottom: -80%;
+  }
+}
+@media (max-width: 991px) {
+  .join__wave {
+    bottom: -30%;
+  }
+}
+@media (max-width: 750px) {
+  .join__wave {
+    bottom: -35%;
+    left: 0;
+  }
+}
+.join__wave img {
+  width: 100vw;
+}
+@media (max-width: 615px) {
+  .join__wave img {
+    width: 150vw;
+  }
+}
+@media (max-width: 575px) {
+  .join__btn {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=main.css.map */
