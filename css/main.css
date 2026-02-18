@@ -2710,22 +2710,6 @@ body {
   bottom: 40%;
   z-index: -3;
 }
-@media (max-width: 1150px) {
-  .join__wave {
-    bottom: -80%;
-  }
-}
-@media (max-width: 991px) {
-  .join__wave {
-    bottom: -30%;
-  }
-}
-@media (max-width: 750px) {
-  .join__wave {
-    bottom: -35%;
-    left: 0;
-  }
-}
 .join__wave img {
   width: 100vw;
 }
@@ -2754,13 +2738,18 @@ body {
 }
 .footer__navigation-list {
   display: flex;
-  gap: 200px;
   list-style: none;
   margin-left: auto;
+  gap: 200px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1500px) {
   .footer__navigation-list {
-    justify-content: space-evenly;
+    gap: 65px;
+  }
+}
+@media (max-width: 1150px) {
+  .footer__navigation-list {
+    gap: 50px;
   }
 }
 .footer__navigation-item {

@@ -13,12 +13,18 @@
   &__navigation {
     &-list {
       display: flex;
-      gap: 200px;
       list-style: none;
       margin-left: auto;
-      @media (max-width: vars.$breakpoint-xl) {
-        justify-content: space-evenly;
+      gap: 200px;
+      @media (max-width: vars.$breakpoint-footer-list) {
+        gap: 65px;
       }
+      @media (max-width: vars.$breakpoint-xxl) {
+        gap: 50px;
+      }
+      // @media (max-width: vars.$breakpoint-xl) {
+      //   gap: 105px;
+      // }
     }
     &-item {
       color: vars.$txt-primary-color;
