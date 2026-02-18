@@ -4,8 +4,16 @@
 .footer {
   background-color: vars.$bg-secondary-color;
   padding: 60px 0;
+  @media (max-width: vars.$breakpoint-xl) {
+    padding: 50px 0;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    padding: 30px 0;
+  }
   &__wrapper {
     display: flex;
+    align-items: flex-start;
+
     @media (max-width: vars.$breakpoint-xl) {
       flex-direction: column;
     }
@@ -13,18 +21,29 @@
   &__navigation {
     &-list {
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 30px;
       list-style: none;
-      margin-left: auto;
-      gap: 200px;
-      @media (max-width: vars.$breakpoint-footer-list) {
-        gap: 65px;
-      }
-      @media (max-width: vars.$breakpoint-xxl) {
-        gap: 50px;
-      }
-      // @media (max-width: vars.$breakpoint-xl) {
-      //   gap: 105px;
+      margin: 0 0 0 150px;
+
+      // @media (max-width: vars.$breakpoint-footer-list) {
+      //   gap: 65px;
       // }
+      @media (max-width: vars.$breakpoint-xxl) {
+        gap: 30px;
+        margin: 0 0 0 50px;
+      }
+      @media (max-width: vars.$breakpoint-xl) {
+        // gap: 105px;
+        margin: 40px 0 0 0;
+        padding: 0;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        max-width: 75vw;
+        flex-wrap: wrap;
+        gap: 25px;
+      }
     }
     &-item {
       color: vars.$txt-primary-color;
@@ -34,6 +53,9 @@
       text-decoration: none;
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$title-s;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        font-size: vars.$txt-l;
       }
     }
   }
@@ -54,6 +76,9 @@
 
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$txt-l;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        font-size: vars.$txt-m;
       }
     }
   }

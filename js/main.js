@@ -74,10 +74,9 @@ document.addEventListener("keydown", (e) => {
 
 // ++++++++++++
 
-// брур под гифкой слишком теплых тонов ⚠️
+// блюр под гифкой слишком теплых тонов ⚠️
 
 // about -> иконки и текст на мобилке. Перепроверить похожую секцию
-
 
 // Hero img position
 
@@ -92,3 +91,7 @@ document.addEventListener("keydown", (e) => {
 // Instructions missing wave
 
 // RECHECK BUTTONS (remove spans, divs for btns)
+
+//Join tablet/mobile placement
+
+// Footer lists placement
