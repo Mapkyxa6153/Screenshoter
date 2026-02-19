@@ -5,6 +5,9 @@
   position: relative;
   overflow-x: clip;
   margin-bottom: 250px;
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 60px;
+  }
   &__wave {
     position: absolute;
     right: 0;
@@ -20,11 +23,14 @@
       bottom: -35%;
       left: 0;
     }
+    @media (max-width: vars.$hero-wave-l) {
+      bottom: -20%;
+    }
 
     & img {
       width: 100vw;
       @media (max-width: vars.$hero-wave-l) {
-        width: 150vw;
+        width: 125%;
       }
     }
   }

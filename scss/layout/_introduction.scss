@@ -4,13 +4,16 @@
 .introduction {
   margin-bottom: 250px;
   @media (max-width: vars.$breakpoint-xl) {
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
   @media (max-width: vars.$breakpoint-l) {
     margin-bottom: 60px;
   }
   &__content {
     @include mixin.section-content;
+    @media (max-width: vars.$breakpoint-l) {
+      margin-bottom: 20px;
+    }
 
     &-title {
       flex: 0 1 50%;

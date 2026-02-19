@@ -9,9 +9,13 @@
   @media (max-width: vars.$breakpoint-l) {
     margin-bottom: 60px;
   }
-  &__btn-wrapper {
-    display: flex;
-    justify-content: center;
+
+  &__btn {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
   }
   &__cards {
     @include mixin.section-list;

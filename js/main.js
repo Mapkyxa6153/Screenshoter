@@ -81,6 +81,7 @@ document.addEventListener("keydown", (e) => {
 // Hero img position
 
 // sections sizes, margins, paddings decorative elements (all added?)
+// Stopped on one-click
 
 // Instructions section (cards)
 
@@ -88,10 +89,7 @@ document.addEventListener("keydown", (e) => {
 
 // faq - js + btn
 
-// Instructions missing wave
+// Instructions wave placement
 
-// RECHECK BUTTONS (remove spans, divs for btns)
 
 //Join tablet/mobile placement
-
-// Footer lists placement

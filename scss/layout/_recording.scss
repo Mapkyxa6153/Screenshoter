@@ -21,9 +21,13 @@
     }
     @media (max-width: vars.$breakpoint-l) {
       bottom: 80%;
+      right: 20%;
     }
     & img {
       width: 100vw;
+      @media (max-width: vars.$breakpoint-l) {
+        width: 170%;
+      }
     }
   }
   &__wrapper {

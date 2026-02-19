@@ -902,7 +902,7 @@ body {
 }
 @media (max-width: 991px) {
   .introduction {
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 575px) {
@@ -930,6 +930,11 @@ body {
   .introduction__content {
     flex-direction: column;
     gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .introduction__content {
+    margin-bottom: 20px;
   }
 }
 .introduction__content-title {
@@ -1088,10 +1093,16 @@ body {
 @media (max-width: 575px) {
   .recording__wave {
     bottom: 80%;
+    right: 20%;
   }
 }
 .recording__wave img {
   width: 100vw;
+}
+@media (max-width: 575px) {
+  .recording__wave img {
+    width: 170%;
+  }
 }
 .recording__wrapper {
   display: flex;
@@ -1667,6 +1678,11 @@ body {
   overflow-x: clip;
   margin-bottom: 250px;
 }
+@media (max-width: 575px) {
+  .editor {
+    margin-bottom: 60px;
+  }
+}
 .editor__wave {
   position: absolute;
   right: 0;
@@ -1689,12 +1705,17 @@ body {
     left: 0;
   }
 }
+@media (max-width: 615px) {
+  .editor__wave {
+    bottom: -20%;
+  }
+}
 .editor__wave img {
   width: 100vw;
 }
 @media (max-width: 615px) {
   .editor__wave img {
-    width: 150vw;
+    width: 125%;
   }
 }
 .editor__glass {
@@ -1887,9 +1908,11 @@ body {
     margin-bottom: 60px;
   }
 }
-.about__btn-wrapper {
-  display: flex;
-  justify-content: center;
+.about__btn {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .about__cards {
   display: grid;
@@ -2183,6 +2206,9 @@ body {
   font-size: 36px;
   margin: 0 0 100px 0;
 }
+.instructions__title br {
+  display: none;
+}
 @media (max-width: 991px) {
   .instructions__title {
     font-size: 20px;
@@ -2197,6 +2223,9 @@ body {
   .instructions__title {
     text-align: center;
     margin: 0 0 30px 0;
+  }
+  .instructions__title br {
+    display: inline;
   }
 }
 .instructions__title-container {
@@ -2220,12 +2249,18 @@ body {
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
   padding: 0;
   gap: 35px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1150px) {
   .instructions__list {
     grid-template-columns: 1fr;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 60px auto;
+  }
+}
+@media (max-width: 575px) {
+  .instructions__list {
+    margin: 0 auto 40px auto;
   }
 }
 .instructions__item {
@@ -2310,15 +2345,17 @@ body {
   }
 }
 .instructions__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
-@media (max-width: 575px) {
-  .instructions__btn {
-    margin-top: 30px;
-  }
+.instructions__wave {
+  position: absolute;
+  bottom: 40%;
+}
+.instructions__wave img {
+  width: 100vw;
 }
 
 .useful {

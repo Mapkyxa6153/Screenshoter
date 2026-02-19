@@ -19,6 +19,9 @@
     z-index: 2;
     font-size: vars.$title-xl;
     margin: 0 0 100px 0;
+    & br {
+      display: none;
+    }
     @media (max-width: vars.$breakpoint-xl) {
       font-size: vars.$title-m;
     }
@@ -28,6 +31,9 @@
     @media (max-width: vars.$breakpoint-l) {
       text-align: center;
       margin: 0 0 30px 0;
+      & br {
+        display: inline;
+      }
     }
     &-container {
       display: flex;
@@ -50,10 +56,14 @@
     grid-template-columns: repeat(3, minmax(max-content, 1fr));
     padding: 0;
     gap: 35px;
+    margin-bottom: 60px;
     @media (max-width: vars.$breakpoint-xxl) {
       grid-template-columns: 1fr;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 60px auto;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      margin: 0 auto 40px auto;
     }
   }
   &__item {
@@ -63,7 +73,6 @@
       flex-direction: column;
       flex: 1;
       @media (max-width: vars.$breakpoint-l) {
-        // align-items: center;
         text-align: center;
       }
     }
@@ -72,6 +81,7 @@
       color: vars.$accent-color;
       font-weight: vars.$font-weight-bold;
       margin-bottom: 60px;
+
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$title-s;
         margin-bottom: 37px;
@@ -122,12 +132,17 @@
     }
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    @media (max-width: vars.$breakpoint-l) {
-      margin-top: 30px;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &__wave {
+    position: absolute;
+    bottom: 40%;
+    & img {
+      width: 100vw;
     }
   }
 }
