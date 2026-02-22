@@ -75,14 +75,28 @@
     &-question {
       color: vars.$txt-primary-color;
       font-weight: vars.$font-weight-medium;
+      font-size: vars.$title-l;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-m;
+      }
     }
     &-answer {
       color: vars.$txt-secondary-color;
+      font-size: vars.$txt-xxl;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$txt-l;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        font-size: vars.$txt-m;
+      }
     }
     &-number {
       color: vars.$accent-color;
       font-size: vars.$title-xl;
       font-weight: vars.$font-weight-bold;
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: vars.$title-l;
+      }
     }
     &-content {
       display: flex;

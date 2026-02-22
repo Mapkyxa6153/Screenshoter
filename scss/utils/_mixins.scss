@@ -120,6 +120,9 @@
     @media (max-width: vars.$breakpoint-xl) {
       font-size: vars.$txt-xxl;
     }
+    @media (max-width: vars.$breakpoint-l) {
+      font-size: vars.$txt-l;
+    }
   }
 }
 
@@ -169,6 +172,7 @@
   }
   @media (max-width: vars.$breakpoint-l) {
     text-align: center;
+    font-size: vars.$txt-m;
   }
 }
 

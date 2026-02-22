@@ -2,9 +2,9 @@
 @use "../utils/mixins" as mixin;
 
 .useful {
-  margin: 250px 0;
+  margin-bottom: 180px;
   @media (max-width: vars.$breakpoint-xl) {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   @media (max-width: vars.$breakpoint-l) {
     margin-bottom: 60px;

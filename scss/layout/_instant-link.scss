@@ -5,13 +5,19 @@
   position: relative;
   overflow-x: clip;
   margin-bottom: 250px;
-
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 160px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 120px;
+  }
   &__ellipse {
     position: absolute;
     z-index: -1;
     width: 55vw;
     top: -70px;
     left: -100px;
+
     @media (max-width: vars.$breakpoint-xl) {
       top: -90px;
       left: 0;
@@ -28,6 +34,11 @@
       width: 122px;
       left: 150px;
       top: -150px;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      width: 59px;
+      left: 80px;
+      top: -100px;
     }
   }
   &__media-card {

@@ -64,32 +64,21 @@ document.addEventListener("keydown", (e) => {
   if (menu.classList.contains("navbar__menu--active")) toggleMenu();
 });
 
-
 // Моб меню цвет текста надо поменять ⚠️
 // Поствил пока белый цвет, но тоже как будто такое себе
 
 // navbar mobile menu, navbar (header while scroll is transparrent) ⚠️
 
-// Waves placement ⚠️
-
-// ++++++++++++
-
-// блюр под гифкой слишком теплых тонов ⚠️
-
-// about -> иконки и текст на мобилке. Перепроверить похожую секцию
-
 // Hero img position
 
-// sections sizes, margins, paddings decorative elements (all added?)
-// Stopped on one-click
-
 // Instructions section (cards)
+
+// Glass effect on imgs (recheck)
 
 // useful section glass card above title
 
 // faq - js + btn
 
 // Instructions wave placement
-
 
 //Join tablet/mobile placement

@@ -12,7 +12,11 @@
     padding: 100px 0 200px 0;
     max-width: 90vw;
     margin: 0 auto;
+    @media (max-width: vars.$breakpoint-xl) {
+      padding: 100px 0 100px 0;
+    }
   }
+
   &__title {
     font-size: vars.$title-xl;
     margin-bottom: 100px;

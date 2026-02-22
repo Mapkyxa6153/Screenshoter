@@ -2,7 +2,7 @@
 @use "../utils/mixins" as mixin;
 
 .introduction {
-  margin-bottom: 250px;
+  margin-bottom: 100px;
   @media (max-width: vars.$breakpoint-xl) {
     margin-bottom: 80px;
   }

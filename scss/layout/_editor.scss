@@ -5,6 +5,9 @@
   position: relative;
   overflow-x: clip;
   margin-bottom: 250px;
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 180px;
+  }
   @media (max-width: vars.$breakpoint-l) {
     margin-bottom: 60px;
   }
@@ -17,7 +20,7 @@
       bottom: -80%;
     }
     @media (max-width: vars.$breakpoint-xl) {
-      bottom: -30%;
+      bottom: -25%;
     }
     @media (max-width: vars.$hero-wave-xl) {
       bottom: -35%;

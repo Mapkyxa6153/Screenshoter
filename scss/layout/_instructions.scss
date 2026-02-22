@@ -3,7 +3,13 @@
 
 .instructions {
   position: relative;
-
+  margin-bottom: 200px;
+  @media (max-width: vars.$breakpoint-xl) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: vars.$breakpoint-l) {
+    margin-bottom: 30px;
+  }
   &__wrapper {
     position: relative;
     background: linear-gradient(90deg, rgba(171, 253, 191, 0.1) 0%, rgba(236, 141, 255, 0.1) 100%);
@@ -122,8 +128,8 @@
     min-height: 200px;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
     margin-bottom: 40px;
+    background-color: vars.$bg-primary-color;
     @media (max-width: vars.$breakpoint-xl) {
       margin-bottom: 30px;
     }
