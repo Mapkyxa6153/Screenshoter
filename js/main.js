@@ -64,16 +64,10 @@ document.addEventListener("keydown", (e) => {
   if (menu.classList.contains("navbar__menu--active")) toggleMenu();
 });
 
-// Моб меню цвет текста надо поменять ⚠️
+// AWARE OF 🟡🟡🟡
 
-// navbar mobile menu, navbar (header while scroll is transparrent) ⚠️
+// navbar mobile menu, navbar (header while scroll is transparrent)
 
 // Hero img position
 
-// Instructions section (cards)
-
-// Glass effect on imgs (recheck)
-
-// faq - js + btn
-
-// Hover on links
+// FAQ placement
