@@ -65,7 +65,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Моб меню цвет текста надо поменять ⚠️
-// Поствил пока белый цвет, но тоже как будто такое себе
 
 // navbar mobile menu, navbar (header while scroll is transparrent) ⚠️
 
@@ -75,10 +74,6 @@ document.addEventListener("keydown", (e) => {
 
 // Glass effect on imgs (recheck)
 
-// useful section glass card above title
-
 // faq - js + btn
-
-// Instructions wave placement
 
 // Hover on links

@@ -27,9 +27,6 @@
       list-style: none;
       margin: 0 0 0 150px;
 
-      // @media (max-width: vars.$breakpoint-footer-list) {
-      //   gap: 65px;
-      // }
       @media (max-width: vars.$breakpoint-xxl) {
         gap: 30px;
         margin: 0 0 0 50px;
@@ -46,11 +43,20 @@
       }
     }
     &-item {
+      display: inline-block;
+      position: relative;
       color: vars.$txt-primary-color;
       font-size: vars.$title-m;
       line-height: vars.$line-height-160;
       font-weight: vars.$font-weight-medium;
       text-decoration: none;
+      transition: transform 0.3s ease;
+      @include mixin.hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: translateY(3px);
+      }
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$title-s;
       }
@@ -69,11 +75,36 @@
       margin-top: 25px;
     }
     &-item {
+      position: relative;
       text-decoration: none;
+      display: inline-block;
       color: vars.$txt-secondary-color;
       font-size: vars.$txt-xxl;
       line-height: vars.$line-height-200;
-
+      transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+      &::after {
+        // decorative line below the link
+        position: absolute;
+        bottom: -1px;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background-color: vars.$accent-color;
+        transition: width 0.3s ease;
+      }
+      @include mixin.hover {
+        color: vars.$accent-color;
+        &::after {
+          width: 100%;
+        }
+      }
+      &:active {
+        transform: translateY(3px);
+      }
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$txt-l;
       }
