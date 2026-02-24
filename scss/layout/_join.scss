@@ -3,6 +3,7 @@
 
 .join {
   position: relative;
+  overflow: hidden;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,23 +11,31 @@
     @media (max-width: vars.$breakpoint-xl) {
       padding: 100px 0;
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 100px;
     }
     @media (max-width: vars.$breakpoint-l) {
       padding: 60px 0;
-      gap: 60px;
+      gap: 150px;
     }
   }
   &__content {
     @include mixin.flex-column;
     gap: 60px;
+
     & a {
       align-self: flex-start;
+      @media (max-width: vars.$breakpoint-xl) {
+        margin: 0 auto;
+      }
     }
     p {
       font-size: vars.$title-xl;
       color: vars.$txt-primary-color;
       @media (max-width: vars.$breakpoint-xl) {
         font-size: vars.$title-l;
+        max-width: 530px;
+        margin: 0 auto;
       }
       @media (max-width: vars.$breakpoint-l) {
         font-size: vars.$title-s;
@@ -35,44 +44,60 @@
     }
   }
   &__media {
+    position: relative;
     &-diskette {
       position: absolute;
       left: 30%;
-      top: 60%;
+      top: 70%;
       width: 144px;
       @media (max-width: vars.$breakpoint-xl) {
         width: 122px;
+        left: 50%;
+        top: 75%;
       }
       @media (max-width: vars.$breakpoint-l) {
         width: 114px;
+        top: 110%;
       }
     }
     &-cone {
       position: absolute;
-      left: 25%;
-      top: 33%;
+      left: 15%;
+      top: 25%;
       width: 130px;
       z-index: -2;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 122px;
+        left: 30%;
+        top: 10%;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        left: 10%;
+        top: 5%;
+      }
     }
     &-glass {
       position: absolute;
-      left: 0;
+      left: -120%;
       top: 43%;
-      width: 40vw;
-      height: 30%;
+      width: 180%;
+      height: 50%;
       z-index: -1;
       border-radius: 0 vars.$br-radius-m vars.$br-radius-m 0;
       background: linear-gradient(90deg, rgba(179, 63, 173, 0.1) 0%, rgba(211, 202, 71, 0.1) 100%);
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      @media (max-width: vars.$breakpoint-xxl) {
-        width: 45vw;
-      }
+      // @media (max-width: vars.$breakpoint-xxl) {
+      //   width: 45vw;
+      // }
       @media (max-width: vars.$breakpoint-xl) {
-        width: 70vw;
+        left: -100%;
+        width: 190%;
+        height: 80%;
       }
       @media (max-width: vars.$breakpoint-l) {
-        width: 100vw;
+        width: 210%;
+        min-height: 210px;
       }
     }
   }
@@ -81,21 +106,21 @@
     right: 0;
     bottom: 40%;
     z-index: -3;
-    // @media (max-width: vars.$breakpoint-xxl) {
-    //   bottom: 35%;
-    // }
-    // @media (max-width: vars.$breakpoint-xl) {
-    //   bottom: -30%;
-    // }
-    // @media (max-width: vars.$hero-wave-xl) {
-    //   bottom: -35%;
-    //   left: 0;
-    // }
-
+    @media (max-width: vars.$breakpoint-xl) {
+      bottom: 65%;
+      left: -20%;
+    }
+    @media (max-width: vars.$breakpoint-l) {
+      bottom: 70%;
+      left: -15%;
+    }
     & img {
       width: 100vw;
-      @media (max-width: vars.$hero-wave-l) {
-        width: 150vw;
+      @media (max-width: vars.$breakpoint-xl) {
+        width: 200vw;
+      }
+      @media (max-width: vars.$breakpoint-l) {
+        width: 250vw;
       }
     }
   }

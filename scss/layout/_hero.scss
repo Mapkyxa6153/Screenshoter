@@ -130,9 +130,7 @@
     & img {
       display: block;
       position: relative;
-      width: 110%;
       max-width: 848px;
-      z-index: 2;
 
       @media (max-width: vars.$breakpoint-xl) {
         width: 100%;

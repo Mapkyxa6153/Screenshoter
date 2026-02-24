@@ -4,6 +4,7 @@
 .instructions {
   position: relative;
   margin-bottom: 200px;
+  overflow: hidden;
   @media (max-width: vars.$breakpoint-xl) {
     margin-bottom: 100px;
   }
@@ -146,7 +147,12 @@
   }
   &__wave {
     position: absolute;
+    width: 150vw;
+    left: -6%;
     bottom: 40%;
+    @media (max-width: vars.$breakpoint-xxl) {
+      display: none;
+    }
     & img {
       width: 100vw;
     }

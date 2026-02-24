@@ -81,4 +81,4 @@ document.addEventListener("keydown", (e) => {
 
 // Instructions wave placement
 
-//Join tablet/mobile placement
+// Hover on links
