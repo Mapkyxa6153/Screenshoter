@@ -1,539 +1,550 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Screenshoter+</title>
-    <meta
-      name="description"
-      content="Сохраняй лучшие игровые моменты в один клик! Максимальное качество, никаких лагов и быстрая отправка друзьям. Твой идеальный софт для скриншотов здесь."
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container header__wrapper">
-        <a href="/" class="logo">
-          <img src="assets/icons/logo.svg" alt="" class="logo__icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screenshoter+</title>
+  <meta name="description"
+    content="Сохраняй лучшие игровые моменты в один клик! Максимальное качество, никаких лагов и быстрая отправка друзьям. Твой идеальный софт для скриншотов здесь." />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-          <span class="logo__title">Screenshoter+</span>
-          <span class="logo__subtitle">Скриншот и запись экрана в 1 клик</span>
-        </a>
-        <nav class="navbar">
-          <div class="navbar__menu">
-            <ul class="navbar__list">
-              <li><a href="#" class="navbar__item">Функции</a></li>
-              <li><a href="#" class="navbar__item">Преимущества</a></li>
-              <li><a href="#" class="navbar__item">Как использовать</a></li>
-              <li><a href="#" class="navbar__item">Частые вопросы</a></li>
-            </ul>
-            <div class="lang-dropdown">
-              <button class="lang-link">RU</button>
-            </div>
-          </div>
-          <button class="burger" type="button" aria-label="Opens mobile menu">
-            <img src="/assets/icons/burger.svg" alt="" class="burger__icon" />
-          </button>
-        </nav>
-      </div>
-    </header>
-    <section class="hero">
-      <div class="hero__wave">
-        <img src="assets/decor/hero-wave.svg" alt="" aria-hidden="true" />
-      </div>
-      <div class="hero__media-gradient"></div>
+<body>
+  <header class="header">
+    <div class="container header__wrapper">
+      <a href="/" class="logo">
+        <img src="assets/icons/logo.svg" alt="" class="logo__icon" />
 
-      <img src="/assets/decor/hero-ring.svg" alt="" class="hero__element-ring" />
-      <div class="container">
-        <div class="hero__wrapper">
-          <div class="hero__content">
-            <!-- &nbsp; - non-breaking space-->
-            <h1 class="hero__content-title">Делайте&nbsp;снимки и&nbsp;записывайте экран <span class="hero-highlight">в 1 клик</span></h1>
-            <span class="hero__content-txt"
-              >Вместе со Screenshoter можно в один клик сделать снимок или записать происходящее на экране ПК, чтобы&nbsp;поделиться с&nbsp;кем
-              угодно</span
-            >
-            <!-- download="Screenshoter+.exe"  -->
-            <a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a>
-          </div>
-          <!-- hidden - true (только на данный момент) -->
-          <div class="hero__media">
-            <div class="hero__media-wrapper">
-              <img src="/assets/images/hero-main.webp" aria-hidden="true" class="hero__media-img" />
-              <span class="hero__media-card">Бесплатная программа <br />для Windows</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="introduction">
-      <div class="container">
-        <div class="introduction__content">
-          <h2 class="introduction__content-title">
-            Встречайте - скриншоты <br />
-            и запись экрана <span class="introduction__content-title--violet">2 в 1</span>
-          </h2>
-          <span class="introduction__content-txt"
-            >Больше не нужно искать две отдельные программы для скриншотов и записи экрана. Screenshoter поможет сделать
-            <span class="introduction__content-txt--black">снимок экрана, записать видео и поделиться</span> им
-            <span class="introduction__content-txt--black">с кем&nbsp;угодно</span>. Можно выделить весь экран, определенную область или активное
-            окно</span
-          >
-        </div>
-        <ul class="introduction__cards">
-          <li class="introduction__cards-item">
-            <img src="/assets/decor/cursor.svg" alt="" /><span>Снимок и запись экрана в&nbsp;1&nbsp;клик</span>
-          </li>
-          <li class="introduction__cards-item"><img src="/assets/decor/diskette.svg" alt="" /><span>Моментальная ссылка&nbsp;на&nbsp;файл</span></li>
-          <li class="introduction__cards-item"><img src="assets/decor/puzzle.svg" alt="" /><span>Удобный редактор&nbsp;снимков</span></li>
-          <li class="introduction__cards-item">
-            <img src="/assets/decor/heart.svg" alt="" /><span class="intro">Бесплатно и&nbsp;без&nbsp;регистрации</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="recording">
-      <div class="recording__wave"><img src="assets/decor/recording-wave.svg" alt="" /></div>
-      <div class="recording__media-glass"></div>
-      <img src="/assets/decor/recording-ring.svg" alt="" class="recording__element-ring" />
-      <div class="container">
-        <div class="recording__wrapper">
-          <div class="recording__media-wrapper">
-            <video autoplay loop muted playsinline poster="image-fallback.jpg" class="recording__media-gif">
-              <source src="/assets/gif/duck-run-duck.mp4" type="video/mp4" />
-              Ваш браузер не поддерживает видео.
-            </video>
-          </div>
-          <div class="recording__content">
-            <h2 class="recording__content-title">Запись экрана</h2>
-            <div class="recording__content-txt--wrapper">
-              <span class="recording__content-txt">Недостаточно снимков? Запишите происходящее на экране со своим голосом или звуком системы. </span>
-              <span class="recording__content-txt">
-                <span class="recording__content-txt--violet">Достаточно нажать две кнопки мыши,</span> выделить необходимую область и начнется запись
-                видео с экрана. Быстро и без сложных настроек</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="one-click">
-      <img src="/assets/decor/one-click-cube.svg" alt="" class="one-click__cube" />
-      <img src="./assets/decor/one-click-ellipse.svg" alt="" class="one-click__ellipse" />
-      <div class="container">
-        <div class="one-click__wrapper">
-          <div class="one-click__media-wrapper">
-            <video autoplay loop muted playsinline poster="image-fallback.jpg" class="one-click__media-gif">
-              <source src="/assets/gif/spider-man.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="one-click__content">
-            <h2 class="one-click__content-title">В один клик</h2>
-            <div class="one-click__content-txt--wrapper">
-              <span class="one-click__content-txt">
-                <span class="one-click__content-txt--violet">Не нужно запоминать комбинации клавиш </span> на клавиатуре, чтобы сделать скриншот или
-                начать записывать видео с экрана.</span
-              >
-              <span class="one-click__content-txt"
-                >Достаточно нажать две кнопки мыши Просто нажмите две кнопки мыши или настройте горячую кнопку на любую удобную клавишу</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="instant-link">
-      <img src="/assets/decor/instant-link-cube.svg" alt="" class="instant-link__cube" />
-      <img src="./assets/decor/instant-link-ellipse.svg" alt="" class="instant-link__ellipse" />
-      <div class="container">
-        <div class="instant-link__wrapper">
-          <div class="instant-link__media-wrapper">
-            <video autoplay loop muted playsinline poster="image-fallback.jpg" class="instant-link__media-gif">
-              <source src="/assets/gif/desert-tumbleweed.mp4" type="video/mp4" />
-            </video>
-            <span class="instant-link__media-card">
-              <span class="instant-link__media-card--black">Файлы хранятся в течение 1 года </span>с момента создания. Можно их удалять
-              самостоятельно. В&nbsp;истории программы доступны последние 5&nbsp;скриншотов</span
-            >
-          </div>
-          <div class="instant-link__content">
-            <h2 class="instant-link__content-title">Мгновенная ссылка</h2>
-            <span class="instant-link__content-txt">
-              Мгновенное получение ссылки на снимок или видео. Вы только нажали Enter, а ссылка уже в буфере обмена. Перейдя по ссылке, можно будет
-              посмотреть ваш снимок или записанное видео</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="editor">
-      <div class="editor__wave">
-        <img src="assets/decor/editor-wave.svg" alt="" aria-hidden="true" />
-      </div>
-      <div class="editor__glass"></div>
-      <img src="./assets/decor/purple-donut.svg" alt="" class="editor__donut" />
-      <div class="container">
-        <div class="editor__wrapper">
-          <div class="editor__media-wrapper">
-            <video autoplay loop muted playsinline poster="image-fallback.jpg" class="editor__media-gif">
-              <source src="/assets/gif/cod.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="editor__content">
-            <h2 class="editor__content-title">И редактор снимков</h2>
-            <div class="editor__content-txt--wrapper">
-              <span class="editor__content-txt">
-                <span class="editor__content-txt--violet">Более 5 инструментов</span> для редактирования. Выделяете область и редактируете.</span
-              >
-              <span class="editor__content-txt"
-                >Если неверно выбрали область - не беда, можно без проблем её передвинуть и/или изменить размер, не удаляя то, что уже
-                нарисовано!</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="about">
-      <div class="container">
-        <ul class="about__cards">
-          <li class="about__cards-item">
-            <img src="/assets/decor/pen.svg" alt="" /><span
-              >Выбирайте цвет <br />
-              и&nbsp;рисуйте карандашом</span
-            >
-          </li>
-          <li class="about__cards-item">
-            <img src="/assets/decor/fullscreen.svg" alt="" /><span>Используйте стрелку, круг или&nbsp;квадрат для&nbsp;выделения</span>
-          </li>
-          <li class="about__cards-item">
-            <img src="assets/decor/chat.svg" alt="" /><span
-              >Оставляйте <br />
-              комментарии</span
-            >
-          </li>
-          <li class="about__cards-item">
-            <img src="/assets/decor/raindrop.svg" alt="" /><span class="intro"
-              >Размывайте <br />
-              необходимую <br />
-              область</span
-            >
-          </li>
-        </ul>
-
-          <a href="#" class="about__btn btn" rel="noopener">Скачать бесплатно</a>
-
-      </div>
-    </section>
-    <section class="features">
-      <img src="assets/decor/purple-sphere.svg" alt="" class="features__purple-sphere" />
-      <img src="assets/decor/white-cylinder-left.svg" alt="" class="features__cylinder--left" />
-      <img src="assets/decor/white-cylinder-right.svg" alt="" class="features__cylinder--right" />
-
-      <div class="features__wrapper">
-        <div class="container">
-          <h2 class="features__title">
-            <span class="features__title--violet">Screenshoter</span> - это функции <br />
-            на каждый день
-          </h2>
-          <ul class="features__list">
-            <li class="features__item">
-              <div class="features__item-wrapper">
-                <img src="/assets/decor/Iridescent.svg" alt="" class="features__icon" />
-                <div class="features__item-content-wrapper">
-                  <div class="features__subtitle-container">
-                    <span class="features__item-subtitle-wrapper">
-                      <span class="features__item-subtitle-number">01.</span>
-                      <span class="features__item-subtitle"
-                        >Обмен <br />
-                        идеями</span
-                      ></span
-                    >
-                  </div>
-                  <div class="features__item-txt-container">
-                    <p class="features__item-txt">
-                      Когда нужно что-то наглядно показать коллеге, исполнителю или заказчику - можно сделать снимок экрана и добавить к нему
-                      комментарий.
-                    </p>
-                    <p class="features__item-txt">
-                      А если ситуация требует более детального объяснения - окей, не проблема. Screenshoter поможет записать видео экрана вместе с
-                      вашими голосовыми комментариями
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="features__item">
-              <div class="features__item-wrapper">
-                <img src="/assets/decor/cube.svg" alt="" class="features__icon" />
-                <div class="features__item-content-wrapper">
-                  <div class="features__subtitle-container">
-                    <span class="features__item-subtitle-wrapper">
-                      <span class="features__item-subtitle-number">02.</span>
-                      <span class="features__item-subtitle"
-                        >Создание <br />
-                        инструкций</span
-                      ></span
-                    >
-                  </div>
-                  <div class="features__item-txt-container">
-                    <p class="features__item-txt">
-                      Нужно что-то наглядно объяснить? Создавайте удобные, пошаговые инструкции, добавляя комментарии и визуальные отметки в
-                      необходимом месте скриншота.
-                    </p>
-                    <p class="features__item-txt">
-                      Поделиться снимком или видеозаписью можно с помощью ссылки, которая мгновенно появляется в буфере обмена
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="features__item">
-              <div class="features__item-wrapper">
-                <img src="/assets/decor/cone.svg" alt="" class="features__icon" />
-                <div class="features__item-content-wrapper">
-                  <div class="features__subtitle-container">
-                    <span class="features__item-subtitle-wrapper">
-                      <span class="features__item-subtitle-number">03.</span>
-                      <span class="features__item-subtitle"
-                        >Обратная <br />
-                        связь</span
-                      ></span
-                    >
-                  </div>
-                  <div class="features__item-txt-container">
-                    <p class="features__item-txt">
-                      Если в процессе работы приложения, сайта или сервиса возникла ошибка, её можно моментально зафиксировать.
-                    </p>
-                    <p class="features__item-txt">Отправьте скриншот в техподдержку, где будет видно, в чем именно заключается проблема</p>
-                  </div>
-                </div>
-              </div>
-            </li>
+        <span class="logo__title">Screenshoter+</span>
+        <span class="logo__subtitle">Скриншот и запись экрана в 1 клик</span>
+      </a>
+      <nav class="navbar">
+        <div class="navbar__menu">
+          <ul class="navbar__list">
+            <li><a href="#" class="navbar__item">Функции</a></li>
+            <li><a href="#" class="navbar__item">Преимущества</a></li>
+            <li><a href="#" class="navbar__item">Как использовать</a></li>
+            <li><a href="#" class="navbar__item">Частые вопросы</a></li>
           </ul>
+          <div class="lang-dropdown">
+            <button class="lang-link">RU</button>
+          </div>
+        </div>
+        <button class="burger" type="button" aria-label="Opens mobile menu">
+          <img src="/assets/icons/burger.svg" alt="" class="burger__icon" />
+        </button>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero__wave">
+      <img src="assets/decor/hero-wave.svg" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero__media-gradient"></div>
+
+    <img src="/assets/decor/hero-ring.svg" alt="" class="hero__element-ring" />
+    <div class="container">
+      <div class="hero__wrapper">
+        <div class="hero__content">
+          <!-- &nbsp; - non-breaking space-->
+          <h1 class="hero__content-title">Делайте&nbsp;снимки и&nbsp;записывайте экран <span class="hero-highlight">в 1
+              клик</span></h1>
+          <span class="hero__content-txt">Вместе со Screenshoter можно в один клик сделать снимок или записать
+            происходящее на экране ПК, чтобы&nbsp;поделиться с&nbsp;кем
+            угодно</span>
+          <!-- download="Screenshoter+.exe"  -->
+          <a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a>
+        </div>
+        <!-- hidden - true (только на данный момент) -->
+        <div class="hero__media">
+          <div class="hero__media-wrapper">
+            <img src="/assets/images/hero-main.webp" aria-hidden="true" class="hero__media-img" />
+            <span class="hero__media-card">Бесплатная программа <br />для Windows</span>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="instructions">
-      <!-- Wave position issues -->
-      
-      <div class="instructions__wrapper">
-        <div class="instructions__wave">
+    </div>
+  </section>
+  <section class="introduction">
+    <div class="container">
+      <div class="introduction__content">
+        <h2 class="introduction__content-title">
+          Встречайте - скриншоты <br /> <!-- тут должно быть тире, а не дефис -->
+          и запись экрана <span class="introduction__content-title--violet">2 в 1</span>
+        </h2>
+        <span class="introduction__content-txt">Больше не нужно искать две отдельные программы для скриншотов и записи
+          экрана. Screenshoter поможет сделать
+          <span class="introduction__content-txt--black">снимок экрана, записать видео и поделиться</span> им
+          <span class="introduction__content-txt--black">с кем&nbsp;угодно</span>. Можно выделить весь экран,
+          определенную область или активное
+          окно</span>
+      </div>
+      <ul class="introduction__cards">
+        <li class="introduction__cards-item">
+          <img src="/assets/decor/cursor.svg" alt="" /><span>Снимок и запись экрана в&nbsp;1&nbsp;клик</span>
+        </li>
+        <li class="introduction__cards-item"><img src="/assets/decor/diskette.svg" alt="" /><span>Моментальная
+            ссылка&nbsp;на&nbsp;файл</span></li>
+        <li class="introduction__cards-item"><img src="assets/decor/puzzle.svg" alt="" /><span>Удобный
+            редактор&nbsp;снимков</span></li>
+        <li class="introduction__cards-item">
+          <img src="/assets/decor/heart.svg" alt="" /><span class="intro">Бесплатно и&nbsp;без&nbsp;регистрации</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="recording">
+    <div class="recording__wave"><img src="assets/decor/recording-wave.svg" alt="" /></div>
+    <div class="recording__media-glass"></div>
+    <img src="/assets/decor/recording-ring.svg" alt="" class="recording__element-ring" />
+    <div class="container">
+      <div class="recording__wrapper">
+        <div class="recording__media-wrapper">
+          <video autoplay loop muted playsinline poster="image-fallback.jpg" class="recording__media-gif">
+            <source src="/assets/gif/duck-run-duck.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+        <div class="recording__content">
+          <h2 class="recording__content-title">Запись экрана</h2>
+          <div class="recording__content-txt--wrapper">
+            <span class="recording__content-txt">Недостаточно снимков? Запишите происходящее на экране со своим голосом
+              или звуком системы. </span>
+            <span class="recording__content-txt">
+              <span class="recording__content-txt--violet">Достаточно нажать две кнопки мыши,</span> выделить
+              необходимую область и начнется запись
+              видео с экрана. Быстро и без сложных настроек</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="one-click">
+    <img src="/assets/decor/one-click-cube.svg" alt="" class="one-click__cube" />
+    <img src="./assets/decor/one-click-ellipse.svg" alt="" class="one-click__ellipse" />
+    <div class="container">
+      <div class="one-click__wrapper">
+        <div class="one-click__media-wrapper">
+          <video autoplay loop muted playsinline poster="image-fallback.jpg" class="one-click__media-gif">
+            <source src="/assets/gif/spider-man.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="one-click__content">
+          <h2 class="one-click__content-title">В один клик</h2> <!-- стекло без блюра, первое с, а все остальные без -->
+          <div class="one-click__content-txt--wrapper">
+            <span class="one-click__content-txt">
+              <span class="one-click__content-txt--violet">Не нужно запоминать комбинации клавиш </span> на клавиатуре,
+              чтобы сделать скриншот или
+              начать записывать видео с экрана.</span>
+            <!-- тут так же мимо с переносами на wide, это делается с помощью ширины, не понимаю проблем тут, переносы по дефу кривые, у тебя первая строка на широком экране заканчивается на "на" -->
+            <span class="one-click__content-txt">Достаточно нажать две кнопки мыши Просто нажмите две кнопки мыши или
+              настройте горячую кнопку на любую удобную клавишу</span> <!-- откуда у тебя тут лишний текст? -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="instant-link">
+    <img src="/assets/decor/instant-link-cube.svg" alt="" class="instant-link__cube" />
+    <img src="./assets/decor/instant-link-ellipse.svg" alt="" class="instant-link__ellipse" />
+    <div class="container">
+      <div class="instant-link__wrapper">
+        <div class="instant-link__media-wrapper">
+          <video autoplay loop muted playsinline poster="image-fallback.jpg" class="instant-link__media-gif">
+            <source src="/assets/gif/desert-tumbleweed.mp4" type="video/mp4" />
+          </video>
+          <span class="instant-link__media-card">
+            <span class="instant-link__media-card--black">Файлы хранятся в течение 1 года </span>с момента создания.
+            Можно их удалять
+            самостоятельно. В&nbsp;истории программы доступны последние 5&nbsp;скриншотов</span>
+        </div>
+        <div class="instant-link__content">
+          <h2 class="instant-link__content-title">Мгновенная ссылка</h2>
+          <span class="instant-link__content-txt">
+            Мгновенное получение ссылки на снимок или видео. Вы только нажали Enter, а ссылка уже в буфере обмена.
+            Перейдя по ссылке, можно будет
+            посмотреть ваш снимок или записанное видео</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="editor">
+    <div class="editor__wave">
+      <img src="assets/decor/editor-wave.svg" alt="" aria-hidden="true" />
+    </div>
+    <div class="editor__glass"></div>
+    <img src="./assets/decor/purple-donut.svg" alt="" class="editor__donut" />
+    <div class="container">
+      <div class="editor__wrapper">
+        <div class="editor__media-wrapper">
+          <video autoplay loop muted playsinline poster="image-fallback.jpg" class="editor__media-gif">
+            <source src="/assets/gif/cod.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="editor__content">
+          <h2 class="editor__content-title">И редактор снимков</h2>
+          <div class="editor__content-txt--wrapper">
+            <span class="editor__content-txt">
+              <span class="editor__content-txt--violet">Более 5 инструментов</span> для редактирования. Выделяете
+              область и редактируете.</span>
+            <span class="editor__content-txt">Если неверно выбрали область - не беда, можно без проблем её передвинуть
+              и/или изменить размер, не удаляя то, что уже
+              нарисовано!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <ul class="about__cards">
+        <li class="about__cards-item">
+          <img src="/assets/decor/pen.svg" alt="" /><span>Выбирайте цвет <br />
+            и&nbsp;рисуйте карандашом</span>
+        </li>
+        <li class="about__cards-item">
+          <img src="/assets/decor/fullscreen.svg" alt="" /><span>Используйте стрелку, круг или&nbsp;квадрат
+            для&nbsp;выделения</span>
+        </li>
+        <li class="about__cards-item">
+          <img src="assets/decor/chat.svg" alt="" /><span>Оставляйте <br />
+            комментарии</span>
+        </li>
+        <li class="about__cards-item">
+          <img src="/assets/decor/raindrop.svg" alt="" /><span class="intro">Размывайте <br />
+            необходимую <br />
+            область</span>
+        </li>
+      </ul>
+
+      <a href="#" class="about__btn btn" rel="noopener">Скачать бесплатно</a>
+
+    </div>
+  </section>
+  <section class="features">
+    <img src="assets/decor/purple-sphere.svg" alt="" class="features__purple-sphere" />
+    <img src="assets/decor/white-cylinder-left.svg" alt="" class="features__cylinder--left" />
+    <img src="assets/decor/white-cylinder-right.svg" alt="" class="features__cylinder--right" />
+
+    <div class="features__wrapper">
+      <div class="container">
+        <h2 class="features__title">
+          <span class="features__title--violet">Screenshoter</span> - это функции <br />
+          на каждый день
+        </h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <div class="features__item-wrapper">
+              <img src="/assets/decor/Iridescent.svg" alt="" class="features__icon" />
+              <div class="features__item-content-wrapper">
+                <div class="features__subtitle-container">
+                  <span class="features__item-subtitle-wrapper">
+                    <span class="features__item-subtitle-number">01.</span>
+                    <span class="features__item-subtitle">Обмен <br />
+                      идеями</span></span>
+                </div>
+                <div class="features__item-txt-container">
+                  <p class="features__item-txt">
+                    Когда нужно что-то наглядно показать коллеге, исполнителю или заказчику - можно сделать снимок
+                    экрана и добавить к нему
+                    комментарий.
+                  </p>
+                  <p class="features__item-txt">
+                    А если ситуация требует более детального объяснения - окей, не проблема. Screenshoter поможет
+                    записать видео экрана вместе с
+                    вашими голосовыми комментариями
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__item-wrapper">
+              <img src="/assets/decor/cube.svg" alt="" class="features__icon" />
+              <div class="features__item-content-wrapper">
+                <div class="features__subtitle-container">
+                  <span class="features__item-subtitle-wrapper">
+                    <span class="features__item-subtitle-number">02.</span>
+                    <span class="features__item-subtitle">Создание <br />
+                      инструкций</span></span>
+                </div>
+                <div class="features__item-txt-container">
+                  <p class="features__item-txt">
+                    Нужно что-то наглядно объяснить? Создавайте удобные, пошаговые инструкции, добавляя комментарии и
+                    визуальные отметки в
+                    необходимом месте скриншота.
+                  </p>
+                  <p class="features__item-txt">
+                    Поделиться снимком или видеозаписью можно с помощью ссылки, которая мгновенно появляется в буфере
+                    обмена
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__item-wrapper">
+              <img src="/assets/decor/cone.svg" alt="" class="features__icon" />
+              <div class="features__item-content-wrapper">
+                <div class="features__subtitle-container">
+                  <span class="features__item-subtitle-wrapper">
+                    <span class="features__item-subtitle-number">03.</span>
+                    <span class="features__item-subtitle">Обратная <br />
+                      связь</span></span>
+                </div>
+                <div class="features__item-txt-container">
+                  <p class="features__item-txt">
+                    Если в процессе работы приложения, сайта или сервиса возникла ошибка, её можно моментально
+                    зафиксировать.
+                  </p>
+                  <p class="features__item-txt">Отправьте скриншот в техподдержку, где будет видно, в чем именно
+                    заключается проблема</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="instructions">
+    <!-- Wave position issues -->
+
+    <div class="instructions__wrapper">
+      <div class="instructions__wave">
         <img src="assets/decor/instructions-wave.svg" alt="" aria-hidden="true" />
       </div>
-        <div class="container">
-          <h2 class="instructions__title">Как использовать <br><span class="instructions__title--violet">Screenshoter</span></h2>
-          <ul class="instructions__list">
-            <li class="instructions__item">
-              <div class="instructions__item-wrapper">
-                <span class="instructions__item-subtitle">Шаг 1.</span>
-                <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a></div>
-
-                <span class="instructions__item-txt"
-                  ><span class="instructions__item-txt instructions__item-txt--violet">Скачайте программу</span><br />
-                  на свой ПК или ноутбук</span
-                >
+      <div class="container"> <!-- ,tлые коробки с кнопкой - не такие тени как в макете, белые поля теряются на фоне -->
+        <h2 class="instructions__title">Как использовать <br><span
+            class="instructions__title--violet">Screenshoter</span></h2>
+        <ul class="instructions__list">
+          <li class="instructions__item">
+            <div class="instructions__item-wrapper">
+              <span class="instructions__item-subtitle">Шаг 1.</span>
+              <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a>
               </div>
-            </li>
-            <li class="instructions__item">
-              <div class="instructions__item-wrapper">
-                <span class="instructions__item-subtitle">Шаг 2.</span>
-                <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a></div>
 
-                <span class="instructions__item-txt">
-                  <span class="instructions__item-txt instructions__item-txt--violet">Запустите Screenshoter:</span><br />
-                  программа будет работать в&nbsp;фоновом&nbsp;режиме</span
-                >
-              </div>
-            </li>
-            <li class="instructions__item">
-              <div class="instructions__item-wrapper">
-                <span class="instructions__item-subtitle">Шаг 3.</span>
-                <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a></div>
-
-                <span class="instructions__item-txt"
-                  ><span class="instructions__item-txt instructions__item-txt--violet">Наслаждайтесь удобством</span><br />
-                  и быстродействием</span
-                >
-              </div>
-            </li>
-          </ul>
-          <a href="#" class="instructions__btn btn" rel="noopener">Скачать бесплатно</a>
-        </div>
-      </div>
-    </section>
-    <section class="useful">
-      <div class="container">
-        <div class="useful__glass-card">
-          Бесплатная программа <br />
-          для Windows
-          <img src="/assets/decor/useful-glass-card-decor.svg" alt="" />
-        </div>
-
-        <div class="useful__content">
-          <h2 class="useful__content-title">
-            <span class="useful__content-title--violet">Screenshoter </span>полезен всем, кто&nbsp;работает в интернете
-          </h2>
-          <span class="useful__content-txt"
-            >Согласовывайте рабочие вопросы, показывайте интересные вещи и обсуждайте любые темы. Делитесь комментариями с помощью бесплатного
-            инструмента 2 в 1</span
-          >
-        </div>
-        <ul class="useful__cards">
-          <li class="useful__cards-item">
-            <img src="/assets/decor/star.svg" alt="" /><span>Без регистрации: не&nbsp;нужно&nbsp;вводить никаких персональных данных</span>
+              <span class="instructions__item-txt"><span
+                  class="instructions__item-txt instructions__item-txt--violet">Скачайте программу</span><br />
+                на свой ПК или ноутбук</span>
+            </div>
           </li>
-          <li class="useful__cards-item">
-            <img src="/assets/decor/shield.svg" alt="" /><span>Бесплатно, без&nbsp;скрытых&nbsp;платежей и&nbsp;комиссий</span>
+          <li class="instructions__item">
+            <div class="instructions__item-wrapper">
+              <span class="instructions__item-subtitle">Шаг 2.</span>
+              <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a>
+              </div>
+
+              <span class="instructions__item-txt">
+                <span class="instructions__item-txt instructions__item-txt--violet">Запустите Screenshoter:</span><br />
+                программа будет работать в&nbsp;фоновом&nbsp;режиме</span>
+            </div>
           </li>
-          <li class="useful__cards-item"><img src="assets/decor/cubes.svg" alt="" /><span>Неограниченное количество скриншотов и записей</span></li>
-          <li class="useful__cards-item">
-            <img src="/assets/decor/cloud.svg" alt="" /><span class="intro"
-              >Файлы хранятся в&nbsp;течение 1 года - вы&nbsp;можете удалить их в любое время</span
-            >
+          <li class="instructions__item">
+            <div class="instructions__item-wrapper">
+              <span class="instructions__item-subtitle">Шаг 3.</span>
+              <div class="instructions__card"><a href="#" class="btn btn-violet" rel="noopener">Скачать бесплатно</a>
+              </div>
+
+              <span class="instructions__item-txt"><span
+                  class="instructions__item-txt instructions__item-txt--violet">Наслаждайтесь удобством</span><br />
+                и быстродействием</span>
+            </div>
           </li>
         </ul>
+        <a href="#" class="instructions__btn btn" rel="noopener">Скачать бесплатно</a>
       </div>
-    </section>
-    <section class="faq">
-      <img src="assets/decor/faq-cone.svg" alt="" aria-hidden="true" class="faq__cone" />
-      <img src="assets/decor/faq-white-sphere-big.svg" alt="" aria-hidden="true" class="faq__sphere faq__sphere--big" />
-      <img src="assets/decor/faq-white-sphere-small.svg" alt="" aria-hidden="true" class="faq__sphere faq__sphere--small" />
-      <div class="container">
-        <h2 class="faq__title">FAQ</h2>
-        <ul class="faq__list">
-          <li class="faq__list-item">
-  <details class="faq__card">
-    <summary class="faq__summary">
-      <span class="faq__card-number">01.</span>
-      <span class="faq__card-question">Платная ли программа?</span>
-      <div class="faq__cross"></div>
-    </summary>
-    
-    <div class="faq__content-wrapper"><div class="faq__content">
-      <p class="faq__card-answer">
-        Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или использование программы — все функции бесплатные.
-      </p>
-    </div></div>
-  </details>
-</li>
-<li class="faq__list-item">
-  <details class="faq__card">
-    <summary class="faq__summary">
-      <span class="faq__card-number">02.</span>
-      <span class="faq__card-question">Для каких платформ доступен Screenshoter?</span>
-      <div class="faq__cross"></div>
-    </summary>
-    
-    <div class="faq__content-wrapper"><div class="faq__content">
-      <p class="faq__card-answer">
-        #
-      </p>
-    </div></div>
-  </details>
-</li>
-         <li class="faq__list-item">
-  <details class="faq__card">
-    <summary class="faq__summary">
-      <span class="faq__card-number">03.</span>
-      <span class="faq__card-question">Чем Screenshoter отличается от других программ
-для создания скриншотов?</span>
-      <div class="faq__cross"></div>
-    </summary>
-    
-    <div class="faq__content-wrapper"><div class="faq__content">
-      <p class="faq__card-answer">
-        #
-      </p>
-    </div></div>
-  </details>
-</li>
-<li class="faq__list-item">
-  <details class="faq__card">
-    <summary class="faq__summary">
-      <span class="faq__card-number">04.</span>
-      <span class="faq__card-question">Куда сохраняются скриншоты и видео?</span>
-      <div class="faq__cross"></div>
-    </summary>
-    
-    <div class="faq__content-wrapper"><div class="faq__content">
-      <p class="faq__card-answer">
-        #
-      </p>
-    </div></div>
-  </details>
-</li>
-<li class="faq__list-item">
-  <details class="faq__card">
-    <summary class="faq__summary">
-      <span class="faq__card-number">05.</span>
-      <span class="faq__card-question">Можно ли удалить файлы с сервера
-в пару кликов?</span>
-      <div class="faq__cross"></div>
-    </summary>
-    
-    <div class="faq__content-wrapper"><div class="faq__content">
-      <p class="faq__card-answer">
-        #
-      </p>
-    </div></div>
-  </details>
-</li>
-        </ul>
+    </div>
+  </section>
+  <section class="useful">
+    <div class="container">
+      <div class="useful__glass-card">
+        Бесплатная программа <br />
+        для Windows
+        <img src="/assets/decor/useful-glass-card-decor.svg" alt="" />
       </div>
-    </section>
-    <section class="join">
-      <div class="join__wave">
-        <img src="assets/decor/join-wave.svg" alt="" aria-hidden="true" />
+
+      <div class="useful__content">
+        <h2 class="useful__content-title">
+          <span class="useful__content-title--violet">Screenshoter </span>полезен всем, кто&nbsp;работает в интернете
+        </h2>
+        <span class="useful__content-txt">Согласовывайте рабочие вопросы, показывайте интересные вещи и обсуждайте любые
+          темы. Делитесь комментариями с помощью бесплатного
+          инструмента 2 в 1</span>
       </div>
-      <div class="container">
-        <div class="join__wrapper">
-          <div class="join__media">
-            <img src="/assets/decor/diskette.svg" alt="" class="join__media-diskette" />
-            <img src="/assets/decor/join-cone.svg" alt="" class="join__media-cone" />
-            <div class="join__media-glass"></div>
-          </div>
-          <div class="join__content">
-            <p>Присоединяйтесь к&nbsp;50&nbsp;000&nbsp;+ пользователей, которые ежедневно используют Screenshoter в работе и&nbsp;личной переписке</p>
-            <a href="#" class="join__btn btn btn-violet" rel="noopener">Загрузить сейчас</a>
-          </div>
+      <ul class="useful__cards">
+        <li class="useful__cards-item">
+          <img src="/assets/decor/star.svg" alt="" /><span>Без регистрации: не&nbsp;нужно&nbsp;вводить никаких
+            персональных данных</span>
+        </li>
+        <li class="useful__cards-item">
+          <img src="/assets/decor/shield.svg" alt="" /><span>Бесплатно, без&nbsp;скрытых&nbsp;платежей
+            и&nbsp;комиссий</span>
+        </li>
+        <li class="useful__cards-item"><img src="assets/decor/cubes.svg" alt="" /><span>Неограниченное количество
+            скриншотов и записей</span></li>
+        <li class="useful__cards-item">
+          <img src="/assets/decor/cloud.svg" alt="" /><span class="intro">Файлы хранятся в&nbsp;течение 1 года -
+            вы&nbsp;можете удалить их в любое время</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="faq">
+    <img src="assets/decor/faq-cone.svg" alt="" aria-hidden="true" class="faq__cone" />
+    <img src="assets/decor/faq-white-sphere-big.svg" alt="" aria-hidden="true" class="faq__sphere faq__sphere--big" />
+    <img src="assets/decor/faq-white-sphere-small.svg" alt="" aria-hidden="true"
+      class="faq__sphere faq__sphere--small" />
+    <div class="container">
+      <h2 class="faq__title">FAQ</h2>
+      <ul class="faq__list">
+        <li class="faq__list-item">
+          <details class="faq__card">
+            <summary class="faq__summary">
+              <span class="faq__card-number">01.</span>
+              <span class="faq__card-question">Платная ли программа?</span>
+              <div class="faq__cross"></div>
+              <!-- отступы под текстом в первом пункте слишком большие, для остальных пунктов ну хоть с ИИ допиши текст. Блюр недостаточный -->
+            </summary>
+
+            <div class="faq__content-wrapper">
+              <div class="faq__content">
+                <p class="faq__card-answer">
+                  Нет, Screenshoter абсолютно бесплатный. Вам не нужно платить за скачивание, установку или
+                  использование программы — все функции бесплатные.
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="faq__list-item">
+          <details class="faq__card">
+            <summary class="faq__summary">
+              <span class="faq__card-number">02.</span>
+              <span class="faq__card-question">Для каких платформ доступен Screenshoter?</span>
+              <div class="faq__cross"></div>
+            </summary>
+
+            <div class="faq__content-wrapper">
+              <div class="faq__content">
+                <p class="faq__card-answer">
+                  #
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="faq__list-item">
+          <details class="faq__card">
+            <summary class="faq__summary">
+              <span class="faq__card-number">03.</span>
+              <span class="faq__card-question">Чем Screenshoter отличается от других программ
+                для создания скриншотов?</span>
+              <div class="faq__cross"></div>
+            </summary>
+
+            <div class="faq__content-wrapper">
+              <div class="faq__content">
+                <p class="faq__card-answer">
+                  #
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="faq__list-item">
+          <details class="faq__card">
+            <summary class="faq__summary">
+              <span class="faq__card-number">04.</span>
+              <span class="faq__card-question">Куда сохраняются скриншоты и видео?</span>
+              <div class="faq__cross"></div>
+            </summary>
+
+            <div class="faq__content-wrapper">
+              <div class="faq__content">
+                <p class="faq__card-answer">
+                  #
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="faq__list-item">
+          <details class="faq__card">
+            <summary class="faq__summary">
+              <span class="faq__card-number">05.</span>
+              <span class="faq__card-question">Можно ли удалить файлы с сервера
+                в пару кликов?</span>
+              <div class="faq__cross"></div>
+            </summary>
+
+            <div class="faq__content-wrapper">
+              <div class="faq__content">
+                <p class="faq__card-answer">
+                  #
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="join">
+    <div class="join__wave">
+      <img src="assets/decor/join-wave.svg" alt="" aria-hidden="true" />
+    </div>
+    <div class="container">
+      <div class="join__wrapper">
+        <div class="join__media">
+          <img src="/assets/decor/diskette.svg" alt="" class="join__media-diskette" />
+          <img src="/assets/decor/join-cone.svg" alt="" class="join__media-cone" />
+          <div class="join__media-glass"></div>
+        </div>
+        <div class="join__content">
+          <p>Присоединяйтесь к&nbsp;50&nbsp;000&nbsp;+ пользователей, которые ежедневно используют Screenshoter в работе
+            и&nbsp;личной переписке</p>
+          <!-- без unbreakable space не работало? проверь стекляшку, расположение и градиент -->
+          <a href="#" class="join__btn btn btn-violet" rel="noopener">Загрузить сейчас</a>
         </div>
       </div>
-    </section>
-    <section class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-         <div class="footer__logo"><a href="/" class="logo">
+    </div>
+  </section>
+  <section class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__logo"><a href="/" class="logo">
             <img src="assets/icons/logo.svg" alt="" class="logo__icon" />
             <span class="logo__title">Screenshoter+</span>
             <span class="logo__subtitle">Скриншот и запись экрана в 1 клик</span>
           </a></div>
-          <ul class="footer__navigation-list">
-            <li><a href="" class="footer__navigation-item">
+        <ul class="footer__navigation-list">
+          <li><a href="" class="footer__navigation-item">
               Продукт</a>
-              <ul class="footer__product-list">
-                <li>
-                  <a href="" class="footer__product-item">Функции</a>
-                </li>
-                <li>
-                  <li>
-                  <a href="" class="footer__product-item">Преимущества</a>
-                </li>
-                </li>
-                <li>
-                 <li>
-                  <a href="" class="footer__product-item">Как использовать</a>
-                </li>
-                </li>
-              </ul>
-            </li>
-            <li><a href="" class="footer__navigation-item">Обратная связь</a></li>
-            <li><a href="" class="footer__navigation-item">Политика конфиденциальности</a></li>
-          </ul>
-        </div>
+            <ul class="footer__product-list">
+              <li>
+                <a href="" class="footer__product-item">Функции</a>
+              </li>
+              <li>
+              <li>
+                <a href="" class="footer__product-item">Преимущества</a>
+              </li>
+          </li>
+          <li>
+          <li>
+            <a href="" class="footer__product-item">Как использовать</a>
+          </li>
+          </li>
+        </ul>
+        </li>
+        <li><a href="" class="footer__navigation-item">Обратная связь</a></li>
+        <li><a href="" class="footer__navigation-item">Политика конфиденциальности</a></li>
+        </ul>
       </div>
-    </section>
-    <script src="js/main.js"></script>
-  </body>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
